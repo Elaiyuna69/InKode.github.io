@@ -1,39 +1,67 @@
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Space Grotesk, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #020415;
         }
 
         nav {
-            background-color: #333;
+            background-color: #051025;
             color: #fff;
-            padding: 10px;
+            padding: 5px;
+            display: flex;
+            
+            
         }
 
         nav ul {
+            align-content: end;
             list-style: none;
             margin: 0;
             padding: 0;
+            margin-left: auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            
         }
 
         nav li {
             margin: 0 10px;
+            align-items: center;
+            display: flex;
         }
 
         nav a {
             text-decoration: none;
             color: #fff;
+            
         }
 
         main {
             padding: 20px;
+            color: #fff;
         }
 
         footer {
-            background-color: #f0f0f0;
+            color: #fff;
             text-align: center;
             padding: 10px;
+        }
+
+        .logo {
+            height: 50px;
+            justify-content: center;
+        }
+
+        .divider {
+            background-color: #7a797b;
+            height: 0.1px;
+        }
+        .material-symbols-rounded {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' -25,
+        'opsz' 24
         }

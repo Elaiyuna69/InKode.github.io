@@ -1,8 +1,18 @@
 
 :root {
-    --md-sys-color-primary: #201E43;
+    --md-sys-color-primary: #006a6a;
     --md-ripple-hover-color: var(--md-sys-color-primary);
     --md-ripple-pressed-color: var(--md-sys-color-primary);
+    --md-filled-button-label-text-font: Space Grotesk;
+    --md-outlined-text-field-input-text-font: Space Grotesk;
+    --md-outlined-text-field-label-text-font: Space Grotesk;
+    --md-outlined-text-field-label-text-color: #fff;
+    --md-outlined-text-field-input-text-color: #fff;
+    --md-outlined-text-field-hover-outline-color: #fff;
+    --md-outlined-text-field-hover-label-text-color: #fff;
+    --md-outlined-text-field-hover-input-text-color: #fff;
+    --md-outlined-text-field-focus-label-text-color: #fff;
+    --md-outlined-text-field-focus-input-text-color: #fff;
   }
        body {
             font-family: Space Grotesk, sans-serif;
@@ -139,6 +149,11 @@
                 padding-bottom: 20px;
                 color: #fff;
             }
+            .boxin {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            }
 
             /* BOTTOM NAV TEST */
             
@@ -206,4 +221,60 @@
         /* DIV STYLING */
         .hero-div{
             text-align: center;
+        }
+
+        /* LOGIN */
+        .boxin {
+            border-radius: 12px;
+            text-align: center;
+            padding-top: auto;
+            width: 300px;
+            height: 500px;
+            background: rgb(101,101,113);
+            background: linear-gradient(180deg, rgb(18, 18, 39) 0%, rgba(0,212,255,0) 100%);
+           
+
+        }
+        .boxin h1 {
+            padding-top: 25px;
+        }
+        .txt_field {
+            position: relative;
+            font-family: Space Grotesk, sans-serif;
+            margin: 0px;
+            padding-top: 20px;
+            transform: none;
+        }
+
+        .login-button {
+            height: 40px;
+            width: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            color: transparent;
+            text-indent: -9999px;
+        }
+
+        .signup_link a{
+            color:#008170;
+        }
+
+        .login-main {
+            padding-top: 70px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: #fff;
+        }
+
+        .login-footer {
+            color: #fff;
+            text-align: center;
+            padding-bottom: 65px;
+        }
+        md-outlined-text-field:hover{
+            outline: #fff;
         }

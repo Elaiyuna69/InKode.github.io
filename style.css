@@ -1,6 +1,8 @@
 
 :root {
-    --md-sys-color-primary: #006a6a;
+    --nav-background:#000818c8;
+    --background:#020415;
+    --md-sys-color-primary: #ac7008;
     --md-ripple-hover-color: var(--md-sys-color-primary);
     --md-ripple-pressed-color: var(--md-sys-color-primary);
     --md-filled-button-label-text-font: Space Grotesk;
@@ -18,12 +20,13 @@
             font-family: Space Grotesk, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #020415;
+            background: rgb(2,4,21);
+background: linear-gradient(180deg, rgba(2,4,21,1) 0%, rgba(22,30,84,1) 100%);
         }
         nav {
             z-index: 999;
             position: fixed;
-            background-color: #051025a8;
+            background-color: var(--nav-background);
             backdrop-filter: blur(10px);
             color: #fff;
             padding: 1em;
@@ -57,8 +60,7 @@
         .nav-menu li:hover .material-symbols-rounded,
         .btm_nav li:hover a, 
         .btm_nav li:hover .material-symbols-rounded{
-        color: #008170;
-        text-decoration: #020415;
+        color: var(--md-sys-color-primary);
         transform:translateY(2px);
         transition: transform 0.3s ease-in-out;
         
@@ -83,7 +85,7 @@
             color: #fff;
             text-align: center;
             /* padding: 10px; */
-            padding-bottom: 65px;
+            padding-bottom: 80px;
             
         }
 
@@ -113,7 +115,7 @@
         }
         .btm_nav {
             display: none;
-            background-color: #051025a8;
+            background-color: var(--nav-background);
             backdrop-filter: blur(10px);
         }
 
@@ -162,12 +164,12 @@
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background-color: #051025a8;
+                background-color: var(--nav-background);
                 backdrop-filter: blur(10px);
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                padding: 10px 0;
+                padding: 15px 0;
             }
             
             .btm_nav ul {
@@ -185,7 +187,7 @@
                 margin: 0 10px;
             }
             .btm_nav li{
-                font-size: medium;
+                font-size:large;
             }
             
             .btm_nav a {
@@ -231,7 +233,7 @@
             width: 300px;
             height: 500px;
             background: rgb(101,101,113);
-            background: linear-gradient(180deg, rgb(18, 18, 39) 0%, rgba(0,212,255,0) 100%);
+            background: linear-gradient(180deg, rgb(31, 31, 70) 0%, rgba(0,212,255,0) 100%);
            
 
         }
@@ -260,7 +262,7 @@
         }
 
         .signup_link a{
-            color:#008170;
+            color: var(--md-sys-color-primary);
         }
 
         .login-main {

@@ -21,7 +21,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InKode :</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,55 +33,57 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
+
   <body>
     <nav class="upper_nav">
       <li class="logo">
-        <img src="src/InKode.png.png" alt="Logo Website" class="logo" />
+        <img src="/assets/images/InKode.png.png" alt="Logo Website" class="logo" />
       </li>
       <ul class="nav-menu">
-        <li onclick="window.location.href='index.html'">
+        <li onclick="window.location.href='/index.html'">
           <span class="material-symbols-rounded">home</span>
           &nbsp;
           <a href="#">Beranda</a>
         </li>
-        <li onclick="window.location.href='course.html'">
+        <li onclick="window.location.href='/layouts/course.html'">
           <span class="material-symbols-rounded">library_books</span>
           &nbsp;
           <a href="#">Kursus</a>
         </li>
-        <li onclick="window.location.href='exercise.html'">
+        <li onclick="window.location.href='/layouts/exercise.html'">
           <span class="material-symbols-rounded">draw</span>
           &nbsp;
           <a href="#">Latihan</a>
         </li>
-        <li onclick="window.location.href='login.html'">
+        <li onclick="window.location.href='/layouts/login.html'">
           <span class="material-symbols-rounded">login</span>
           &nbsp;
           <a href="#">Login</a>
         </li>
+        <li><md-switch icons selected></md-switch></li>
       </ul>
     </nav>
     <nav class="btm_nav">
       <ul>
-        <li onclick="window.location.href='index.html'">
+        <li onclick="window.location.href='/index.html'">
           <a href="#">
             <span class="material-symbols-rounded">home</span>
             <span>Home</span>
           </a>
         </li>
-        <li onclick="window.location.href='course.html'">
+        <li onclick="window.location.href='/layouts/course.html'">
           <a href="#">
             <span class="material-symbols-rounded">book</span>
             <span>Course</span>
           </a>
         </li>
-        <li onclick="window.location.href='exercise.html'">
+        <li onclick="window.location.href='/layouts/exercise.html'">
           <a href="#">
             <span class="material-symbols-rounded">edit</span>
             <span>Latihan</span>
           </a>
         </li>
-        <li onclick="window.location.href='login.html'">
+        <li onclick="window.location.href='/layouts/login.html'">
           <a href="#">
             <span class="material-symbols-rounded">person</span>
             <span>Akun</span>
@@ -92,6 +94,7 @@
 
     <main>
       <div class="hero-div">
+        <md-switch class="switchmode" icons selected></md-switch>
         <h2>Selamat Datang di COurse!</h2>
         <p>Mulai perjalanan belajar coding Anda sekarang.</p>
         <md-filled-button type="reset">Reset</md-filled-button>

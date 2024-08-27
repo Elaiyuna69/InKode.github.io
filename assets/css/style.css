@@ -1,6 +1,7 @@
 :root {
   --nav-background: #000818c8;
   --background: #020415;
+  --neutral: #fff;
   --gradient-1: rgba(2, 4, 21, 1);
   --gradient-2: rgba(22, 30, 84, 1);
   --md-sys-color-primary: #ac7008;
@@ -9,13 +10,13 @@
   --md-filled-button-label-text-font: Space Grotesk;
   --md-outlined-text-field-input-text-font: Space Grotesk;
   --md-outlined-text-field-label-text-font: Space Grotesk;
-  --md-outlined-text-field-label-text-color: #fff;
-  --md-outlined-text-field-input-text-color: #fff;
-  --md-outlined-text-field-hover-outline-color: #fff;
-  --md-outlined-text-field-hover-label-text-color: #fff;
-  --md-outlined-text-field-hover-input-text-color: #fff;
-  --md-outlined-text-field-focus-label-text-color: #fff;
-  --md-outlined-text-field-focus-input-text-color: #fff;
+  --md-outlined-text-field-label-text-color: var(--neutral);
+  --md-outlined-text-field-input-text-color: var(--neutral);
+  --md-outlined-text-field-hover-outline-color: var(--neutral);
+  --md-outlined-text-field-hover-label-text-color: var(--neutral);
+  --md-outlined-text-field-hover-input-text-color: var(--neutral);
+  --md-outlined-text-field-focus-label-text-color: var(--neutral);
+  --md-outlined-text-field-focus-input-text-color: var(--neutral);
 }
 body {
   font-family: Space Grotesk, sans-serif;
@@ -27,13 +28,14 @@ body {
     var(--gradient-1) 0%,
     var(--gradient-2) 100%
   );
+  transition: background-color 0.5s ease;
 }
 nav {
   z-index: 999;
   position: fixed;
   background-color: var(--nav-background);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: var(--neutral);
   padding: 1em;
   padding-right: 0px;
   display: flex;
@@ -72,7 +74,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--neutral);
 }
 
 main {
@@ -80,11 +82,11 @@ main {
   padding-left: 90px;
   padding-right: 90px;
   padding-bottom: 20px;
-  color: #fff;
+  color: var(--neutral);
 }
 
 footer {
-  color: #fff;
+  color: var(--neutral);
   text-align: center;
   padding-bottom: 80px;
 }
@@ -155,7 +157,7 @@ footer {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 20px;
-    color: #fff;
+    color: var(--neutral);
   }
   .login-main {
     display: flex;
@@ -207,7 +209,7 @@ footer {
 
   .btm_nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--neutral);
   }
   .btm_nav a span.material-symbols-rounded {
     font-size: 24px;
@@ -285,11 +287,11 @@ footer {
   padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
-  color: #fff;
+  color: var(--neutral);
 }
 
 .login-footer {
-  color: #fff;
+  color: var(--neutral);
   text-align: center;
   padding-bottom: 80px;
 }

@@ -53,14 +53,13 @@
 
         main {
             padding-top: 30px;
-            padding-bottom: 25px;
             color: #fff;
         }
 
         footer {
             color: #fff;
             text-align: center;
-            padding: 6px;
+            padding-bottom: 65px;
         }
 
         .logo {
@@ -85,7 +84,7 @@
             text-align: center;
             padding-top: auto;
             width: 300px;
-            height: 450px;
+            height: 500px;
             background-color: #232D3F;
 
         }
@@ -161,6 +160,10 @@
 
         /* ADAPTIVE SCREEN */
         @media screen and (max-width: 550px) {
+            nav {
+                padding: 5px;
+                height: auto;
+            }
             .nav-menu li a{
                 display: none;
             }
@@ -172,6 +175,19 @@
             }
             nav li {
                 margin: 5 5px;
+            }
+
+            .logo{
+                margin-left: 0;
+                height: 50px;
+                justify-content: center;
+            }
+
+            main {
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+                color: #fff;
             }
             .boxin {
                 margin: auto;
@@ -228,7 +244,18 @@
                 display: none;
                 
             }
-        }
-        @media screen and (max-width: 700px) {
+            /* HIDE SCROLL */
+            }
+            ::-webkit-scrollbar {
+            display: none;
+            }
             
-        }
+            .body {
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+            }
+
+            /* DIV STYLING */
+            .hero-div{
+                text-align: center;
+            }

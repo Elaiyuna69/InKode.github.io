@@ -21,15 +21,20 @@ function switchMode() {
 
   // LOGO SWITCH
 
-  whitemode.style.display = 'none';
-  darkmode.style.display = 'none';
-
   if (isDarkMode) {
     whitemode.style.display = 'none';
     darkmode.style.display = 'block';
+    stars.style.display = 'block';
+    stars2.style.display = 'block';
+    stars3.style.display = 'block';
+    stars4.style.display = 'block';
   } else {
     whitemode.style.display = 'block';
     darkmode.style.display = 'none';
+    stars.style.display = 'none';
+    stars2.style.display = 'none';
+    stars3.style.display = 'none';
+    stars4.style.display = 'none';
   }
 }
 

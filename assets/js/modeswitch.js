@@ -27,9 +27,12 @@ function switchMode() {
   if (isDarkMode) {
     whitemode.style.display = 'none';
     darkmode.style.display = 'block';
+    console.log (isDarkMode);
   } else {
     whitemode.style.display = 'block';
     darkmode.style.display = 'none';
+    console.log (isDarkMode);
   }
 }
 
+console.log (isDarkMode);

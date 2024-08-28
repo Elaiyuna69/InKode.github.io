@@ -18,6 +18,8 @@
 
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+    <script src="../assets/js/modeswitch.js">
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InKode: Login</title>
@@ -38,7 +40,7 @@
     <nav class="upper_nav">
       <li class="logo">
         <img
-          src="../assets/images/InKode.png.png"
+          src="../assets/images/InKode.png"
           alt="Logo Website"
           class="logo"
         />
@@ -64,7 +66,10 @@
           &nbsp;
           <a href="#">Login</a>
         </li>
-        <li><md-switch icons selected></md-switch></li>
+        <li><md-icon-button style="margin-top: 0;" onclick="switchMode()" toggle selected>
+          <span class="material-symbols-rounded">light_mode</span>
+          <span class="material-symbols-rounded" slot="selected">dark_mode</span>
+        </md-icon-button></li>
       </ul>
     </nav>
     <nav class="btm_nav">
@@ -95,7 +100,6 @@
         </li>
       </ul>
     </nav>
-    <md-switch class="switchmode" icons selected></md-switch>
     <main class="login-main">
       <div class="boxin">
         <h1>Sign In</h1>
@@ -124,6 +128,10 @@
         </div>
       </div>
     </main>
+    <md-icon-button style="margin-top: 18px;" onclick="switchMode()" class="switchmode" toggle selected>
+      <span class="material-symbols-rounded">light_mode</span>
+      <span class="material-symbols-rounded" slot="selected">dark_mode</span>
+    </md-icon-button>
     <div class="divider"></div>
     <footer class="login-footer">
       <p>&copy; 2024 InKode. All rights reserved.</p>

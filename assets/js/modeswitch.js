@@ -21,13 +21,15 @@ function switchMode() {
 
   // LOGO SWITCH
 
+  whitemode.style.display = 'none';
+  darkmode.style.display = 'none';
 
   if (isDarkMode) {
-    whitemode.style.display = 'block';
-    darkmode.style.display = 'none';
-  } else {
     whitemode.style.display = 'none';
     darkmode.style.display = 'block';
+  } else {
+    whitemode.style.display = 'block';
+    darkmode.style.display = 'none';
   }
 }
 

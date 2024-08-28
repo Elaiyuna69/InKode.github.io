@@ -39,8 +39,8 @@
   <body>
     <nav class="upper_nav">
       <li class="logo">
-        <img id="whitemode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
-        <img id="darkmode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />
+        <img id="darkmode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+        <img id="whitemode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />
       </li>
       <ul class="nav-menu">
         <li onclick="window.location.href='../index.html'">
@@ -63,7 +63,7 @@
           &nbsp;
           <a href="#">Login</a>
         </li>
-        <li><md-icon-button style="margin-top: 0;" onclick="switchMode()" toggle selected>
+        <li><md-icon-button style="margin-top: 0; z-index: 9999;" onclick="switchMode()" toggle selected>
           <span class="material-symbols-rounded">light_mode</span>
           <span class="material-symbols-rounded" slot="selected">dark_mode</span>
         </md-icon-button></li>

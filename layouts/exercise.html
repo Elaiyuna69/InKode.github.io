@@ -11,7 +11,7 @@
           "@material/web/": "https://esm.run/@material/web/"
         }
       }
-    </script>]
+    </script>
     <script type="module">
       import "@material/web/all.js";
       import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
@@ -19,11 +19,11 @@
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
     <script src="../assets/js/modeswitch.js">
-    </script> 
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InKode :</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -99,14 +99,14 @@
     </nav>
 
     <main>
+      <md-icon-button style="margin-top: 18px;" onclick="switchMode()" class="switchmode" toggle selected>
+        <span class="material-symbols-rounded">light_mode</span>
+        <span class="material-symbols-rounded" slot="selected">dark_mode</span>
+      </md-icon-button>
       <div class="hero-div">
-          <md-icon-button style="margin-top: 18px;" onclick="switchMode()" class="switchmode" toggle selected>
-            <span class="material-symbols-rounded">light_mode</span>
-            <span class="material-symbols-rounded" slot="selected">dark_mode</span>
-          </md-icon-button>
-        <h2>Selamat Datang di Exercise!</h2>
+        <h2>Selamat Datang di InKode!</h2>
         <p>Mulai perjalanan belajar coding Anda sekarang.</p>
-        <md-filled-button type="reset">Reset</md-filled-button>
+        <md-filled-button>Sigma Kan?</md-filled-button>
       </div>
       <h1>Selamat Datang di Website Saya!</h1>
       <p>

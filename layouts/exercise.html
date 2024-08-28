@@ -63,7 +63,7 @@
           &nbsp;
           <a href="#">Login</a>
         </li>
-        <li><md-icon-button style="margin-top: 0;" onclick="switchMode()" toggle selected>
+        <li><md-icon-button style="margin-top: 0px;" id="mode-toggle-dekstop" toggle selected>
           <span class="material-symbols-rounded">light_mode</span>
           <span class="material-symbols-rounded" slot="selected">dark_mode</span>
         </md-icon-button></li>
@@ -85,7 +85,7 @@
         </li>
         <li onclick="window.location.href='../layouts/exercise.html'">
           <a href="#">
-            <span class="material-symbols-rounded">edit</span>
+            <span class="material-symbols-rounded nav_active">edit</span>
             <span>Latihan</span>
           </a>
         </li>
@@ -99,7 +99,7 @@
     </nav>
 
     <main>
-      <md-icon-button style="margin-top: 18px;" onclick="switchMode()" class="switchmode" toggle selected>
+      <md-icon-button style="margin-top: 18px;" id="mode-toggle" class="switchmode" toggle selected>
         <span class="material-symbols-rounded">light_mode</span>
         <span class="material-symbols-rounded" slot="selected">dark_mode</span>
       </md-icon-button>
@@ -134,6 +134,7 @@
     <footer>
       <p>&copy; 2024 InKode. All rights reserved.</p>
     </footer>
+    
   </body>
 
   <body style="background-color: black">
@@ -143,5 +144,7 @@
       <div id="stars3"></div>
       <div id="stars4"></div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/modeswitch.js"></script>
   </body>
 </html>

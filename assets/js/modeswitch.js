@@ -1,42 +1,59 @@
-let isDarkMode = true;
+$(document).ready(function() {
+  let isDarkMode = localStorage.getItem('mode') || 'light';
 
-function switchMode() {
-  isDarkMode = !isDarkMode;
-  const newGradient1 = isDarkMode
-    ? "rgba(2, 4, 21, 1)"
-    : "rgba(255, 255, 255, 1)";
-  const newGradient2 = isDarkMode
-    ? "rgba(22, 30, 84, 1)"
-    : "rgba(0, 88, 156, 1)";
-  const newNeutral = isDarkMode
-    ? "#fff"
-    : "#000";
-    const newNav = isDarkMode
-    ? "#000818c8"
-    : "#d6e4ffc8";
-  document.documentElement.style.setProperty("--gradient-1", newGradient1);
-  document.documentElement.style.setProperty("--gradient-2", newGradient2);
-  document.documentElement.style.setProperty("--neutral", newNeutral);
-  document.documentElement.style.setProperty("--nav-background", newNav);
+  function applyMode() {
+    const newGradient1 = isDarkMode === "dark"
+      ? "rgba(2, 4, 21, 1)"
+      : "rgba(255, 255, 255, 1)";
+    const newGradient2 = isDarkMode === "dark"
+      ? "rgba(22, 30, 84, 1)"
+      : "rgba(0, 88, 156, 1)";
+    const newNeutral = isDarkMode === "dark"
+      ? "#fff"
+      : "#000";
+    const newNeutral2 = isDarkMode === "dark"
+      ? "#000"
+      : "#fff";
+    const newNav = isDarkMode === "dark"
+      ? "#000818c8"
+      : "#d6e4ffc8";
+    const newGradientLog1 = isDarkMode === "dark"
+      ? "rgba(2, 4, 21, 1)"
+      : "rgba(0, 88, 156, 1)";
+    const newGradientLog2 = isDarkMode === "dark"
+      ? " rgba(0, 212, 255, 0)"
+      : "rgba(255, 255, 255, 0)";
 
-  // LOGO SWITCH
+    document.documentElement.style.setProperty("--gradient-1", newGradient1);
+    document.documentElement.style.setProperty("--gradient-2", newGradient2);
+    document.documentElement.style.setProperty("--neutral", newNeutral);
+    document.documentElement.style.setProperty("--neutral2", newNeutral2);
+    document.documentElement.style.setProperty("--nav-background", newNav);
+    document.documentElement.style.setProperty("--gradient-login-1", newGradientLog1);
+    document.documentElement.style.setProperty("--gradient-login-2", newGradientLog2);
 
-  if (isDarkMode) {
-    whitemode.style.display = 'none';
-    darkmode.style.display = 'block';
-    console.log (isDarkMode);
-    stars.style.display = 'block';
-    stars2.style.display = 'block';
-    stars3.style.display = 'block';
-    stars4.style.display = 'block';
-  } else {
-    whitemode.style.display = 'block';
-    darkmode.style.display = 'none';
-    stars.style.display = 'none';
-    stars2.style.display = 'none';
-    stars3.style.display = 'none';
-    stars4.style.display = 'none';
+    if (isDarkMode === "dark") {
+      $('#whitemode').hide();
+      $('#darkmode').show();
+    } else {
+      $('#whitemode').show();
+      $('#darkmode').hide();
+    }
   }
-}
 
-console.log (isDarkMode);
+  applyMode();
+
+  $('#mode-toggle').click(function() {
+    isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
+    localStorage.setItem('mode', isDarkMode);
+
+    applyMode();
+  });
+
+  $('#mode-toggle-dekstop').click(function() {
+    isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
+    localStorage.setItem('mode', isDarkMode);
+
+    applyMode();
+  })
+});

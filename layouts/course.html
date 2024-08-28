@@ -37,7 +37,8 @@
   <body>
     <nav class="upper_nav">
       <li class="logo">
-        <img src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+        <img id="darkmode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+        <img id="whitemode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />
       </li>
       <ul class="nav-menu">
         <li onclick="window.location.href='../index.html'">
@@ -60,7 +61,6 @@
           &nbsp;
           <a href="#">Login</a>
         </li>
-        <li><md-switch icons selected></md-switch></li>
       </ul>
     </nav>
     <nav class="btm_nav">
@@ -91,10 +91,9 @@
         </li>
       </ul>
     </nav>
-
+    
     <main>
       <div class="hero-div">
-        <md-switch class="switchmode" icons selected></md-switch>
         <h2>Selamat Datang di COurse!</h2>
         <p>Mulai perjalanan belajar coding Anda sekarang.</p>
         <md-filled-button type="reset">Reset</md-filled-button>

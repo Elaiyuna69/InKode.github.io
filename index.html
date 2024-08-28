@@ -18,6 +18,8 @@
 
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+    <script src="../assets/js/modeswitch.js">
+    </script> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InKode :</title>
@@ -37,7 +39,8 @@
   <body>
     <nav class="upper_nav">
       <li class="logo">
-        <img id="whitemode" src="assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+        <img id="darkmode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+        <img id="whitemode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />
       </li>
       <ul class="nav-menu">
         <li onclick="window.location.href='index.html'">
@@ -60,9 +63,12 @@
           &nbsp;
           <a href="#">Login</a>
         </li>
-        <li><md-switch icons selected></md-switch></li>
-      </ul>
-    </nav>
+        <li><md-icon-button style="margin-top: 0;" onclick="switchMode()" toggle selected>
+        <span class="material-symbols-rounded">light_mode</span>
+        <span class="material-symbols-rounded" slot="selected">dark_mode</span>
+      </md-icon-button></li>
+    </ul>
+  </nav>
     <nav class="btm_nav">
       <ul>
         <li onclick="window.location.href='index.html'">
@@ -93,8 +99,11 @@
     </nav>
 
     <main>
+      <md-icon-button style="margin-top: 18px;" onclick="switchMode()" class="switchmode" toggle selected>
+        <span class="material-symbols-rounded">light_mode</span>
+        <span class="material-symbols-rounded" slot="selected">dark_mode</span>
+      </md-icon-button>
       <div class="hero-div">
-        <md-switch class="switchmode" icons selected></md-switch>
         <h2>Selamat Datang di InKode!</h2>
         <p>Mulai perjalanan belajar coding Anda sekarang.</p>
         <md-filled-button>Sigma Kan?</md-filled-button>

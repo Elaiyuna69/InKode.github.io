@@ -47,6 +47,10 @@ nav {
   align-items: center;
 }
 
+#whitemode {
+  display: none;
+}
+
 nav ul {
   align-content: end;
   list-style: none;

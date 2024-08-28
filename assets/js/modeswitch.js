@@ -18,5 +18,18 @@ function switchMode() {
   document.documentElement.style.setProperty("--gradient-2", newGradient2);
   document.documentElement.style.setProperty("--neutral", newNeutral);
   document.documentElement.style.setProperty("--nav-background", newNav);
+
+  // LOGO SWITCH
+
+  whitemode.style.display = 'none';
+  darkmode.style.display = 'none';
+
+  if (isDarkMode) {
+    whitemode.style.display = 'none';
+    darkmode.style.display = 'block';
+  } else {
+    whitemode.style.display = 'block';
+    darkmode.style.display = 'none';
+  }
 }
 

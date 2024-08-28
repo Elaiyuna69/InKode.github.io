@@ -7,7 +7,7 @@ $(document).ready(function() {
       : "rgba(255, 255, 255, 1)";
     const newGradient2 = isDarkMode === "dark"
       ? "rgba(22, 30, 84, 1)"
-      : "rgba(0, 88, 156, 1)";
+      : "rgb(184, 185, 185)";
     const newNeutral = isDarkMode === "dark"
       ? "#fff"
       : "#000";
@@ -16,10 +16,10 @@ $(document).ready(function() {
       : "#fff";
     const newNav = isDarkMode === "dark"
       ? "#000818c8"
-      : "#d6e4ffc8";
+      : "rgba(255, 255, 255, 0.72)";
     const newGradientLog1 = isDarkMode === "dark"
       ? "rgba(2, 4, 21, 1)"
-      : "rgba(0, 88, 156, 1)";
+      : "rgba(255, 255, 255, 1)";
     const newGradientLog2 = isDarkMode === "dark"
       ? " rgba(0, 212, 255, 0)"
       : "rgba(255, 255, 255, 0)";

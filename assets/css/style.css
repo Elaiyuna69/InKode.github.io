@@ -1,14 +1,15 @@
 :root {
   --nav-background: #000818c8;
-  --background: #020415;
+  --background: #fff;
   --neutral: #fff;
   --neutral-2: #000;
   --gradient-1: rgba(2, 4, 21, 1);
   --gradient-2: rgb(22, 30, 84);
   --gradient-login-1: rgb(31, 31, 70);
   --gradient-login-2: rgba(0, 212, 255, 0);
-  --md-sys-color-primary:#38976b;
+  --md-sys-color-primary:#947a24;
   --star-color: #3c6f96;
+  --activeNav: #aa8c2a;
   --md-ripple-hover-color: var(--md-sys-color-primary);
   --md-ripple-pressed-color: var(--md-sys-color-primary);
   --md-filled-button-label-text-font: Space Grotesk;
@@ -21,7 +22,6 @@
   --md-outlined-text-field-hover-input-text-color: var(--neutral);
   --md-outlined-text-field-focus-label-text-color: var(--neutral);
   --md-outlined-text-field-focus-input-text-color: var(--neutral);
-  --md-outlined-text-field-trailing-icon-color: red;
 }
 body {
   font-family: Space Grotesk, sans-serif;
@@ -72,14 +72,25 @@ nav li {
   transition: transform 0.3s ease-in-out;
 }
 
+#activated:hover{
+  transition: transform 0.3s ease-in-out;
+  color: white;
+  transform: translateY(2px);
+  font-weight: bold;
+  
+
+}
 .nav-menu li:hover a,
 .nav-menu li:hover .material-symbols-rounded,
 .btm_nav li:hover a,
 .btm_nav li:hover .material-symbols-rounded {
-  color: var(--md-sys-color-primary);
-  transform: translateY(2px);
   transition: transform 0.3s ease-in-out;
+  /* color: var(--md-sys-color-primary); */
+  transform: translateY(2px);
+  font-weight: bold;
 }
+
+
 
 nav a {
   text-decoration: none;
@@ -123,14 +134,21 @@ footer {
   background-color: var(--nav-background);
   backdrop-filter: blur(10px);
 }
-.nav_active {
-  background-color:#606cba;
+.nav_active .material-symbols-rounded {
+  background-color: var(--activeNav);
   border-radius: 90px;
   height: 27px;
-  width: auto;
+  width: 50px;
   align-content: center;
+  display:inline-block;
+  /* position: absolute;
+  z-index: -1; */
   /* color: var(--neutral-2); */
   color: #000522;
+}
+
+.nav_text{
+
 }
 
 .switchmode {
@@ -202,7 +220,7 @@ footer {
     background-color: var(--nav-background);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 0;
     height: 50px;
@@ -215,7 +233,7 @@ footer {
     display: flex;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .btm_nav li span {
@@ -226,6 +244,9 @@ footer {
   }
   .btm_nav li {
     font-size: large;
+    text-align:center;
+    width:100px;
+    justify-content: center;
   }
 
   .btm_nav a {

@@ -330,12 +330,6 @@ footer {
   color: var(--neutral);
 }
 
-.login-footer {
-  color: var(--neutral);
-  text-align: center;
-  padding-bottom: 80px;
-}
-
 /* KURSUS PAGE */
 
 .contier {

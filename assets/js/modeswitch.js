@@ -7,7 +7,7 @@ $(document).ready(function () {
       : "rgba(255, 255, 255, 1)";
     const newGradient2 = isDarkMode === "dark"
       ? "rgba(22, 30, 84, 1)"
-      : "rgb(184, 185, 185)";
+      : "rgb(193, 190, 145)";
     const newNeutral = isDarkMode === "dark"
       ? "#fff"
       : "#000";

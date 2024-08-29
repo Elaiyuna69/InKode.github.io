@@ -34,11 +34,6 @@
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
       >
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
   </head>
 
   <body style="height: 100vh;">
@@ -49,22 +44,22 @@
       </li>
       <ul class="nav-menu">
         <li onclick="window.location.href='../index.html'">
-          <span class="material-symbols-rounded">home</span>
+          <span class="material-symbols-rounded"><i style="margin-bottom: 4px;" class="fa-light fa-house"></i></span>
           &nbsp;
           <a href="#">Beranda</a>
         </li>
         <li onclick="window.location.href='../layouts/course.html'">
-          <span class="material-symbols-rounded">library_books</span>
+          <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
           &nbsp;
           <a href="#">Kursus</a>
         </li>
         <li onclick="window.location.href='../layouts/exercise.html'">
-          <span class="material-symbols-rounded">draw</span>
+          <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
           &nbsp;
           <a href="#">Latihan</a>
         </li>
         <li onclick="window.location.href='../layouts/login.html'">
-          <span class="material-symbols-rounded">login</span>
+          <span class="material-symbols-rounded"><i class="fa-light fa-right-to-bracket"></i></span>
           &nbsp;
           <a href="#">Login</a>
         </li>
@@ -78,25 +73,25 @@
       <ul>
         <li onclick="window.location.href='../index.html'">
           <a href="#">
-            <span class="material-symbols-rounded">home</span>
-            <span>Home</span>
+            <span class="material-symbols-rounded"><i class="fa-light fa-house"></i></span>
+            <span>Beranda</span>
           </a>
         </li>
         <li onclick="window.location.href='../layouts/course.html'">
           <a href="#">
-            <span class="material-symbols-rounded">book</span>
-            <span>Course</span>
+            <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
+            <span>Kursus</span>
           </a>
         </li>
         <li onclick="window.location.href='../layouts/exercise.html'">
           <a href="#">
-            <span class="material-symbols-rounded">edit</span>
+            <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
             <span>Latihan</span>
           </a>
         </li>
         <li onclick="window.location.href='../layouts/login.html'" id="activated">
           <a href="#" class="nav_active">
-            <span class="material-symbols-rounded">person</span>
+            <span class="material-symbols-rounded"><i class="fa-light fa-user"></i></span>
             <span class="nav_text">Akun</span>
           </a>
         </li>
@@ -119,18 +114,18 @@
         <md-filled-button class="login-button">
           <p style="display: flex; align-items: start">
             <i style="margin-top: 6px; margin-right:6px;" class="fa-light fa-right-to-bracket"></i>
-            <span style="margin-top: 2.3px">Sigma Kan</span>
+            <span style="margin-top: 2.3px">Login</span>
           </p>
         </md-filled-button>
         <div class="signup_link">
-          Sign up here.
+          Tidak punya akun?
           <a href="#">Sign up</a>
         </div>
       </div>
     </main>
     <md-icon-button style="margin-top: 18px;" id="mode-toggle" class="switchmode" toggle selected>
       <i class="fa-light fa-sun-bright"></i>
-          <i class="fa-light fa-moon" slot="selected"></i>
+      <i class="fa-light fa-moon" slot="selected"></i>
     </md-icon-button>
     <div class="divider"></div>
     <footer class="login-footer">

@@ -35,6 +35,7 @@ body {
   );
   transition: background-color 0.5s ease;
 }
+
 nav {
   z-index: 999;
   position: fixed;
@@ -147,10 +148,6 @@ footer {
   color: #000522;
 }
 
-.nav_text{
-
-}
-
 .switchmode {
   position: fixed;
   display: none;
@@ -254,7 +251,7 @@ footer {
     color: var(--neutral);
   }
   .btm_nav a span.material-symbols-rounded {
-    font-size: 24px;
+    font-size: 15px;
     display: block;
     margin: 0 auto;
   }
@@ -340,6 +337,10 @@ footer {
 }
 
 /* KURSUS PAGE */
+
+.contier {
+  color: var(--neutral);
+}
 .kursus-main {
   display: flex;
   justify-content: space-between;
@@ -350,7 +351,7 @@ footer {
   border-radius: 12px;
   display: inline-block;
   position: relative;
-  color: rgb(255, 255, 255);
+  color: var(--neutral);
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
@@ -438,7 +439,7 @@ footer {
 .kursus-isi_teks {
   height: 10px;
   font-size: 14px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   width: 100%;
   font-family: Space Grotesk, sans-serif;

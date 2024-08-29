@@ -35,9 +35,21 @@ $(document).ready(function() {
     if (isDarkMode === "dark") {
       $('#whitemode').hide();
       $('#darkmode').show();
+      $('#cppwhite').show();
+      $('#cppblack').hide();
+      $('#htmlwhite').show();
+      $('#htmlblack').hide();
+      $('#pywhite').show();
+      $('#pyblack').hide();
     } else {
       $('#whitemode').show();
       $('#darkmode').hide();
+      $('#cppwhite').hide();
+      $('#cppblack').show();
+      $('#htmlwhite').hide();
+      $('#htmlblack').show();
+      $('#pywhite').hide();
+      $('#pyblack').show();
     }
   }
 

@@ -1,146 +1,332 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="mdui-theme-light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
-    />
-    <meta name="renderer" content="webkit" />
-
-    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
-    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
-    <!-- Include the icon's CSS file if using the icon attribute -->
-
-    <title>Hello, world!</title>
-    <script>
-      import "mdui/components/navigation-bar.js";
-      import "mdui/components/navigation-bar-item.js";
-      import { setColorScheme } from "mdui/functions/setColorScheme.js";
-
-      // Generate a color scheme based on #0061a4 and set the <html> element to that color scheme
-      setColorScheme("#ac7008");
-    </script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Coding Interaktif</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
     <style>
-      :root,
-      :root {
-        --mdui-color-primary-light: 105, 95, 0;
-    --mdui-color-on-primary-light: 255, 255, 255;
-    --mdui-color-primary-container-light: 245, 229, 104;
-    --mdui-color-on-primary-container-light: 32, 28, 0;
-    --mdui-color-secondary-light: 100, 95, 65;
-    --mdui-color-on-secondary-light: 255, 255, 255;
-    --mdui-color-secondary-container-light: 235, 227, 189;
-    --mdui-color-on-secondary-container-light: 31, 28, 5;
-    --mdui-color-tertiary-light: 65, 102, 82;
-    --mdui-color-on-tertiary-light: 255, 255, 255;
-    --mdui-color-tertiary-container-light: 194, 236, 210;
-    --mdui-color-on-tertiary-container-light: 0, 33, 19;
-    --mdui-color-error-light: 186, 26, 26;
-    --mdui-color-on-error-light: 255, 255, 255;
-    --mdui-color-error-container-light: 255, 218, 214;
-    --mdui-color-on-error-container-light: 65, 0, 2;
-    --mdui-color-background-light: 255, 251, 255;
-    --mdui-color-on-background-light: 29, 28, 22;
-    --mdui-color-surface-light: 255, 251, 255;
-    --mdui-color-on-surface-light: 29, 28, 22;
-    --mdui-color-surface-variant-light: 232, 226, 208;
-    --mdui-color-on-surface-variant-light: 74, 71, 58;
-    --mdui-color-outline-light: 123, 119, 104;
-    --mdui-color-outline-variant-light: 204, 198, 181;
-    --mdui-color-shadow-light: 0, 0, 0;
-    --mdui-color-scrim-light: 0, 0, 0;
-    --mdui-color-inverse-surface-light: 50, 48, 42;
-    --mdui-color-inverse-on-surface-light: 245, 240, 231;
-    --mdui-color-inverse-primary-light: 216, 200, 79;
-    --mdui-color-surface-dim-light: 222, 217, 209;
-    --mdui-color-surface-bright-light: 254, 249, 240;
-    --mdui-color-surface-container-lowest-light: 255, 255, 255;
-    --mdui-color-surface-container-low-light: 248, 243, 234;
-    --mdui-color-surface-container-light: 242, 237, 228;
-    --mdui-color-surface-container-high-light: 236, 232, 223;
-    --mdui-color-surface-container-highest-light: 231, 226, 217;
-    --mdui-color-surface-tint-color-light: 105, 95, 0;
-    --mdui-color-primary-dark: 216, 200, 79;
-    --mdui-color-on-primary-dark: 55, 49, 0;
-    --mdui-color-primary-container-dark: 79, 71, 0;
-    --mdui-color-on-primary-container-dark: 245, 229, 104;
-    --mdui-color-secondary-dark: 206, 199, 162;
-    --mdui-color-on-secondary-dark: 53, 49, 23;
-    --mdui-color-secondary-container-dark: 76, 71, 43;
-    --mdui-color-on-secondary-container-dark: 235, 227, 189;
-    --mdui-color-tertiary-dark: 167, 208, 183;
-    --mdui-color-on-tertiary-dark: 17, 55, 38;
-    --mdui-color-tertiary-container-dark: 41, 78, 59;
-    --mdui-color-on-tertiary-container-dark: 194, 236, 210;
-    --mdui-color-error-dark: 255, 180, 171;
-    --mdui-color-on-error-dark: 105, 0, 5;
-    --mdui-color-error-container-dark: 147, 0, 10;
-    --mdui-color-on-error-container-dark: 255, 180, 171;
-    --mdui-color-background-dark: 29, 28, 22;
-    --mdui-color-on-background-dark: 231, 226, 217;
-    --mdui-color-surface-dark: 29, 28, 22;
-    --mdui-color-on-surface-dark: 231, 226, 217;
-    --mdui-color-surface-variant-dark: 74, 71, 58;
-    --mdui-color-on-surface-variant-dark: 204, 198, 181;
-    --mdui-color-outline-dark: 149, 145, 129;
-    --mdui-color-outline-variant-dark: 74, 71, 58;
-    --mdui-color-shadow-dark: 0, 0, 0;
-    --mdui-color-scrim-dark: 0, 0, 0;
-    --mdui-color-inverse-surface-dark: 231, 226, 217;
-    --mdui-color-inverse-on-surface-dark: 50, 48, 42;
-    --mdui-color-inverse-primary-dark: 105, 95, 0;
-    --mdui-color-surface-dim-dark: 20, 19, 14;
-    --mdui-color-surface-bright-dark: 59, 57, 51;
-    --mdui-color-surface-container-lowest-dark: 15, 14, 9;
-    --mdui-color-surface-container-low-dark: 29, 28, 22;
-    --mdui-color-surface-container-dark: 33, 32, 26;
-    --mdui-color-surface-container-high-dark: 43, 42, 36;
-    --mdui-color-surface-container-highest-dark: 54, 53, 47;
-    --mdui-color-surface-tint-color-dark: 216, 200, 79;
-      }
-      .mdui-theme-light {
-        color: #000;
-        background-color: #fff;
-      }
-
-      .mdui-theme-dark {
-        color: #fff;
-        background-color: #000;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .mdui-theme-auto {
-          color: #fff;
-          background-color: #000;
+        /* Reset dan styles dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f3f4f6;
+        }
+        .home_container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .home_header {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem;
+        }
+        .home_header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .home_section {
+            margin: 2rem 0;
+        }
+        .home_section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .home_feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .home_feature-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .home_feature-card h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .home_feature-card p {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        .home_carousel {
+            position: relative;
+            background-color: #e5e7eb;
+            padding: 2rem 0;
+        }
+        .home_carousel-container {
+            overflow: hidden;
+        }
+        .home_carousel-slide {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        .home_carousel-item {
+            flex: 0 0 100%;
+            padding: 1rem;
+        }
+        .home_carousel-content {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .home_carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .home_carousel-button-left {
+            left: 1rem;
+        }
+        .home_carousel-button-right {
+            right: 1rem;
+        }
+        .home_unfinished-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .home_unfinished-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .home_progress-bar {
+            width: 100%;
+            background-color: #e5e7eb;
+            border-radius: 9999px;
+            height: 0.5rem;
+            overflow: hidden;
+        }
+        .home_progress-bar-fill {
+            height: 100%;
+            background-color: #2563eb;
+            border-radius: 9999px;
+        }
+        .home_community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .home_community-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .home_quest-reward {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .home_quest-item, .home_reward-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 0.5rem;
+        }
+        .home_xp {
+            color: #10b981;
+            font-weight: 600;
+        }
+        .home_points {
+            color: #8b5cf6;
+            font-weight: 600;
+        }
     </style>
-  </head>
-  <body>
-    <mdui-navigation-bar value="item-1" style="position: relative">
-      <mdui-navigation-bar-item icon="place" value="item-1">
-        Item 1
-      </mdui-navigation-bar-item>
-      <mdui-navigation-bar-item icon="commute" value="item-2">
-        Item 2
-      </mdui-navigation-bar-item>
-      <mdui-navigation-bar-item icon="people" value="item-3">
-        Item 3
-      </mdui-navigation-bar-item>
-    </mdui-navigation-bar>
-    <mdui-button>Hello, world!</mdui-button>
-    <mdui-bottom-app-bar>sigma</mdui-bottom-app-bar>
-    <mdui-badge>122</mdui-badge>
-    <mdui-dialog>sigma kan</mdui-dialog>
-    <mdui-checkbox>dick</mdui-checkbox>
-    <mdui-circular-progress></mdui-circular-progress>
-    <mdui-menu>dic, dic
+</head>
+<body>
+    <header class="home_header">
+        <h1>Belajar Coding Interaktif</h1>
+    </header>
 
-    </mdui-menu>
-    <mdui-fab>S</mdui-fab>
-    <mdui-navigation-bar><mdui-navigation-bar-item icon="place" value="item-1">
-        Item 1</mdui-navigation-bar>
-        <mdui-switch>dick</mdui-switch>
-  </body>
+    <main>
+        <section class="home_section home_container">
+            <h2>Fitur Menarik</h2>
+            <div class="home_feature-grid">
+                <div class="home_feature-card">
+                    <i data-lucide="gamepad"></i>
+                    <h3>Pembelajaran Berbasis Game</h3>
+                    <p>Belajar sambil bermain untuk pengalaman yang menyenangkan</p>
+                </div>
+                <div class="home_feature-card">
+                    <i data-lucide="users"></i>
+                    <h3>Komunitas Suportif</h3>
+                    <p>Diskusi dan bantuan dari sesama pembelajar</p>
+                </div>
+                <div class="home_feature-card">
+                    <i data-lucide="hard-drive"></i>
+                    <h3>Penyimpanan Akun</h3>
+                    <p>Simpan progres belajar Anda dengan aman</p>
+                </div>
+                <div class="home_feature-card">
+                    <i data-lucide="book"></i>
+                    <h3>Materi Komprehensif</h3>
+                    <p>Dari dasar hingga tingkat lanjut</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home_carousel">
+            <div class="home_container">
+                <h2>Sekilas Materi Unik</h2>
+                <div class="home_carousel-container">
+                    <div class="home_carousel-slide">
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>CSS Flexbox</h3>
+                                <p>Flexbox membuat layout responsif menjadi mudah!</p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>HTML Semantik</h3>
+                                <p>Tag semantik meningkatkan aksesibilitas dan SEO.</p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>JavaScript Promises</h3>
+                                <p>Promises memudahkan penanganan operasi asinkron.</p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>Python List Comprehension</h3>
+                                <p>Buat list dengan cara yang efisien dan elegan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="home_section home_container">
+            <h2>Lanjutkan Belajar</h2>
+            <div class="home_unfinished-grid">
+                <div class="home_unfinished-card">
+                    <h3>Dasar-dasar HTML</h3>
+                    <div class="home_progress-bar">
+                        <div class="home_progress-bar-fill" style="width: 75%"></div>
+                    </div>
+                    <p>Progress: 75%</p>
+                </div>
+                <div class="home_unfinished-card">
+                    <h3>CSS Layout</h3>
+                    <div class="home_progress-bar">
+                        <div class="home_progress-bar-fill" style="width: 50%"></div>
+                    </div>
+                    <p>Progress: 50%</p>
+                </div>
+                <div class="home_unfinished-card">
+                    <h3>JavaScript Dasar</h3>
+                    <div class="home_progress-bar">
+                        <div class="home_progress-bar-fill" style="width: 30%"></div>
+                    </div>
+                    <p>Progress: 30%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home_section home_carousel">
+            <div class="home_container">
+                <h2>Update Komunitas</h2>
+                <div class="home_community-grid">
+                    <div class="home_community-card">
+                        <i data-lucide="bell"></i>
+                        <h3>Pertanyaan Baru</h3>
+                        <p>5 pertanyaan baru tentang React Hooks</p>
+                    </div>
+                    <div class="home_community-card">
+                        <i data-lucide="award"></i>
+                        <h3>Kuis Latihan Baru</h3>
+                        <p>Kuis JavaScript ES6 telah ditambahkan</p>
+                    </div>
+                    <div class="home_community-card">
+                        <i data-lucide="users"></i>
+                        <h3>Diskusi Populer</h3>
+                        <p>Tips optimasi performa website</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home_section home_container">
+            <div class="home_quest-reward">
+                <div>
+                    <h2>Quest Harian</h2>
+                    <div class="home_quest-item">
+                        <span>Selesaikan 3 latihan CSS</span>
+                        <span class="home_xp">50 XP</span>
+                    </div>
+                    <div class="home_quest-item">
+                        <span>Bantu 2 anggota komunitas</span>
+                        <span class="home_xp">30 XP</span>
+                    </div>
+                    <div class="home_quest-item">
+                        <span>Buat proyek kecil menggunakan JavaScript</span>
+                        <span class="home_xp">100 XP</span>
+                    </div>
+                </div>
+                <div>
+                    <h2>Reward Toko</h2>
+                    <div class="home_reward-item">
+                        <span>Stiker Laptop Developer</span>
+                        <span class="home_points">500 poin</span>
+                    </div>
+                    <div class="home_reward-item">
+                        <span>Kursus Premium 1 Bulan</span>
+                        <span class="home_points">2000 poin</span>
+                    </div>
+                    <div class="home_reward-item">
+                        <span>Konsultasi 1-on-1 dengan Expert</span>
+                        <span class="home_points">5000 poin</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+
+        function moveCarousel(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            document.querySelector('.home_carousel-slide').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
 </html>

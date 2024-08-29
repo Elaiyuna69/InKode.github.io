@@ -89,15 +89,12 @@ nav li {
   transform: translateY(2px);
   font-weight: bold;
 }
-
-
-
 nav a {
   text-decoration: none;
   color: var(--neutral);
 }
 
-main {
+.content-title {
   padding-top: 30vh;
   padding-left: 90px;
   padding-right: 90px;
@@ -146,11 +143,6 @@ footer {
   /* color: var(--neutral-2); */
   color: #000522;
 }
-
-.nav_text{
-
-}
-
 .switchmode {
   position: fixed;
   display: none;
@@ -158,6 +150,33 @@ footer {
   right: 0;
   margin: 15px;
   z-index: 9999;
+}
+.text_line{
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* HOME SCREEN */
+.home_feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 40px;
+}
+.home_feature-card {
+  background: linear-gradient(
+    180deg,
+    var(--gradient-login-1) 0%,
+    var(--gradient-login-2) 100%
+  );
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.home_feature-card h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 /* ADAPTIVE SCREEN */
@@ -188,12 +207,16 @@ footer {
     display: block;
   }
 
-  main {
-    padding-top: 30vh;
+  .content-title {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 20px;
     color: var(--neutral);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
   }
   .login-main {
     /* margin-left: 0px; */
@@ -266,6 +289,10 @@ footer {
   .upper_nav ul {
     display: none;
   }
+  .hero-div {
+
+  }
+
 
   /* HIDE SCROLL */
 }

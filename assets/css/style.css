@@ -557,6 +557,7 @@ footer {
 }
 
 .kursus-kotak1 .kursus-box-materi .img {
+  
   display: flex;
   justify-content: start;
   align-items: center;
@@ -565,6 +566,7 @@ footer {
 .kursus-kotak1,
 .kursus-kotak2,
 .kursus-kotak3 {
+  font-family: Space Grotesk, sans-serif;
   margin-top: 20px;
   margin-bottom: 60px;
   width: 100%;

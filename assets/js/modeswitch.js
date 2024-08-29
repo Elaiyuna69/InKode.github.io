@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let isDarkMode = localStorage.getItem('mode') || 'light';
 
   function applyMode() {
@@ -55,14 +55,14 @@ $(document).ready(function() {
 
   applyMode();
 
-  $('#mode-toggle').click(function() {
+  $('#mode-toggle').click(function () {
     isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
     localStorage.setItem('mode', isDarkMode);
 
     applyMode();
   });
 
-  $('#mode-toggle-dekstop').click(function() {
+  $('#mode-toggle-dekstop').click(function () {
     isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
     localStorage.setItem('mode', isDarkMode);
 

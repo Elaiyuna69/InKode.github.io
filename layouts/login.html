@@ -1,144 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="importmap">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script type="importmap">
       {
         "imports": {
           "@material/web/": "https://esm.run/@material/web/"
         }
       }
     </script>
-    <script type="module">
-      import "@material/web/all.js";
-      import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
+  <script type="module">
+    import "@material/web/all.js";
+    import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
 
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
-    <script src="../assets/js/modeswitch.js">
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InKode: Login</title>
-    <link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-      >
-  </head>
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
+  <script src="../assets/js/modeswitch.js">
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InKode: Login</title>
+  <link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
 
-  <body style="height: 100vh;">
-    <nav class="upper_nav">
-      <li class="logo">
-        <img id="darkmode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
-        <img id="whitemode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />      
+<body style="height: 100vh;">
+  <nav class="upper_nav">
+    <li class="logo">
+      <img id="darkmode" src="../assets/images/InKodeWhite.png" alt="Logo Website" class="logo" />
+      <img id="whitemode" src="../assets/images/InKodeBlack.png" alt="Logo Website" class="logo" />
+    </li>
+    <ul class="nav-menu">
+      <li onclick="window.location.href='../index.html'">
+        <span class="material-symbols-rounded"><i style="margin-bottom: 4px;" class="fa-light fa-house"></i></span>
+        &nbsp;
+        <a href="#">Beranda</a>
       </li>
-      <ul class="nav-menu">
-        <li onclick="window.location.href='../index.html'">
-          <span class="material-symbols-rounded"><i style="margin-bottom: 4px;" class="fa-light fa-house"></i></span>
-          &nbsp;
-          <a href="#">Beranda</a>
-        </li>
-        <li onclick="window.location.href='../layouts/course.html'">
-          <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
-          &nbsp;
-          <a href="#">Kursus</a>
-        </li>
-        <li onclick="window.location.href='../layouts/exercise.html'">
-          <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
-          &nbsp;
-          <a href="#">Latihan</a>
-        </li>
-        <li onclick="window.location.href='../layouts/login.html'">
-          <span class="material-symbols-rounded"><i class="fa-light fa-right-to-bracket"></i></span>
-          &nbsp;
-          <a href="#">Login</a>
-        </li>
-        <li><md-icon-button style="margin-top: 0px;" id="mode-toggle-dekstop" toggle selected>
+      <li onclick="window.location.href='../layouts/course.html'">
+        <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
+        &nbsp;
+        <a href="#">Kursus</a>
+      </li>
+      <li onclick="window.location.href='../layouts/exercise.html'">
+        <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
+        &nbsp;
+        <a href="#">Latihan</a>
+      </li>
+      <li onclick="window.location.href='../layouts/login.html'">
+        <span class="material-symbols-rounded"><i class="fa-light fa-right-to-bracket"></i></span>
+        &nbsp;
+        <a href="#">Login</a>
+      </li>
+      <li><md-icon-button style="margin-top: 0px;" id="mode-toggle-dekstop" toggle selected>
           <i class="fa-light fa-sun-bright"></i>
           <i class="fa-light fa-moon" slot="selected"></i>
         </md-icon-button></li>
-      </ul>
-    </nav>
-    <nav class="btm_nav">
-      <ul>
-        <li onclick="window.location.href='../index.html'">
-          <a href="#">
-            <span class="material-symbols-rounded"><i class="fa-light fa-house"></i></span>
-            <span>Beranda</span>
-          </a>
-        </li>
-        <li onclick="window.location.href='../layouts/course.html'">
-          <a href="#">
-            <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
-            <span>Kursus</span>
-          </a>
-        </li>
-        <li onclick="window.location.href='../layouts/exercise.html'">
-          <a href="#">
-            <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
-            <span>Latihan</span>
-          </a>
-        </li>
-        <li onclick="window.location.href='../layouts/login.html'" id="activated">
-          <a href="#" class="nav_active">
-            <span class="material-symbols-rounded"><i class="fa-light fa-user"></i></span>
-            <span class="nav_text">Akun</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <main class="login-main">
-      <div class="boxin">
-        <h1>Sign In</h1>
-        <md-outlined-text-field
-          class="txt_field"
-          label="Username"
-          aria-required="true"
-        ></md-outlined-text-field>
-        <md-outlined-text-field
-          class="txt_field"
-          label="Password"
-          aria-required="true"
-          type="password"
-        ></md-outlined-text-field>
-        <md-filled-button class="login-button">
-          <p style="display: flex; align-items: start">
-            <i style="margin-top: 6px; margin-right:6px;" class="fa-light fa-right-to-bracket"></i>
-            <span style="margin-top: 2.3px">Login</span>
-          </p>
-        </md-filled-button>
-        <div class="signup_link">
-          Tidak punya akun?
-          <a href="#">Sign up</a>
-        </div>
+    </ul>
+  </nav>
+  <nav class="btm_nav">
+    <ul>
+      <li onclick="window.location.href='../index.html'">
+        <a href="#">
+          <span class="material-symbols-rounded"><i class="fa-light fa-house"></i></span>
+          <span>Beranda</span>
+        </a>
+      </li>
+      <li onclick="window.location.href='../layouts/course.html'">
+        <a href="#">
+          <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
+          <span>Kursus</span>
+        </a>
+      </li>
+      <li onclick="window.location.href='../layouts/exercise.html'">
+        <a href="#">
+          <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
+          <span>Latihan</span>
+        </a>
+      </li>
+      <li onclick="window.location.href='../layouts/login.html'" id="activated">
+        <a href="#" class="nav_active">
+          <span class="material-symbols-rounded"><i class="fa-light fa-user"></i></span>
+          <span class="nav_text">Akun</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main class="login-main">
+    <div class="boxin">
+      <h1>Sign In</h1>
+      <md-outlined-text-field class="txt_field" label="Username" aria-required="true"></md-outlined-text-field>
+      <md-outlined-text-field class="txt_field" label="Password" aria-required="true"
+        type="password"></md-outlined-text-field>
+      <md-filled-button class="login-button">
+        <p style="display: flex; align-items: start">
+          <i style="margin-top: 6px; margin-right:6px;" class="fa-light fa-right-to-bracket"></i>
+          <span style="margin-top: 2.3px">Login</span>
+        </p>
+      </md-filled-button>
+      <div class="signup_link">
+        Tidak punya akun?
+        <a href="#">Sign up</a>
       </div>
-    </main>
-    <md-icon-button style="margin-top: 18px;" id="mode-toggle" class="switchmode" toggle selected>
-      <i class="fa-light fa-sun-bright"></i>
-      <i class="fa-light fa-moon" slot="selected"></i>
-    </md-icon-button>
-    <footer>
-      <p>&copy; 2024 InKode. All rights reserved.</p>
-    </footer>
-  </body>
-  <body style="background-color: black">
-    <div class="bg-animation">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-      <div id="stars4"></div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/modeswitch.js"></script>
-  </body>
+  </main>
+  <md-icon-button style="margin-top: 18px;" id="mode-toggle" class="switchmode" toggle selected>
+    <i class="fa-light fa-sun-bright"></i>
+    <i class="fa-light fa-moon" slot="selected"></i>
+  </md-icon-button>
+  <footer>
+    <p>&copy; 2024 InKode. All rights reserved.</p>
+  </footer>
+</body>
+
+<body style="background-color: black">
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/modeswitch.js"></script>
+</body>
+
 </html>

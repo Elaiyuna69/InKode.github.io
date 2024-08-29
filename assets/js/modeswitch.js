@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let isDarkMode = localStorage.getItem('mode') || 'light';
 
   function applyMode() {
@@ -35,22 +35,34 @@ $(document).ready(function() {
     if (isDarkMode === "dark") {
       $('#whitemode').hide();
       $('#darkmode').show();
+      $('#cppwhite').show();
+      $('#cppblack').hide();
+      $('#htmlwhite').show();
+      $('#htmlblack').hide();
+      $('#pywhite').show();
+      $('#pyblack').hide();
     } else {
       $('#whitemode').show();
       $('#darkmode').hide();
+      $('#cppwhite').hide();
+      $('#cppblack').show();
+      $('#htmlwhite').hide();
+      $('#htmlblack').show();
+      $('#pywhite').hide();
+      $('#pyblack').show();
     }
   }
 
   applyMode();
 
-  $('#mode-toggle').click(function() {
+  $('#mode-toggle').click(function () {
     isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
     localStorage.setItem('mode', isDarkMode);
 
     applyMode();
   });
 
-  $('#mode-toggle-dekstop').click(function() {
+  $('#mode-toggle-dekstop').click(function () {
     isDarkMode = (isDarkMode === 'dark') ? 'light' : 'dark';
     localStorage.setItem('mode', isDarkMode);
 

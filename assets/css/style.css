@@ -7,7 +7,7 @@
   --gradient-2: rgb(22, 30, 84);
   --gradient-login-1: rgb(31, 31, 70);
   --gradient-login-2: rgba(0, 212, 255, 0);
-  --md-sys-color-primary:#947a24;
+  --md-sys-color-primary: #947a24;
   --star-color: #3c6f96;
   --activeNav: #aa8c2a;
   --md-ripple-hover-color: var(--md-sys-color-primary);
@@ -23,18 +23,18 @@
   --md-outlined-text-field-focus-label-text-color: var(--neutral);
   --md-outlined-text-field-focus-input-text-color: var(--neutral);
 }
+
 body {
   font-family: Space Grotesk, sans-serif;
   margin: 0;
   padding: 0;
   background: var(--gradient-1);
-  background: linear-gradient(
-    180deg,
-    var(--gradient-1) 0%,
-    var(--gradient-2) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--gradient-1) 0%,
+      var(--gradient-2) 100%);
   transition: background-color 0.5s ease;
 }
+
 nav {
   z-index: 999;
   position: fixed;
@@ -72,14 +72,15 @@ nav li {
   transition: transform 0.3s ease-in-out;
 }
 
-#activated:hover{
+#activated:hover {
   transition: transform 0.3s ease-in-out;
   color: white;
   transform: translateY(2px);
   font-weight: bold;
-  
+
 
 }
+
 .nav-menu li:hover a,
 .nav-menu li:hover .material-symbols-rounded,
 .btm_nav li:hover a,
@@ -118,6 +119,7 @@ footer {
   background-color: #7a797b;
   height: 0.1px;
 }
+
 .material-symbols-rounded {
   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 24;
 }
@@ -126,18 +128,20 @@ footer {
 .btm_nav-menu {
   align-content: center;
 }
+
 .btm_nav {
   display: none;
   background-color: var(--nav-background);
   backdrop-filter: blur(10px);
 }
+
 .nav_active .material-symbols-rounded {
   background-color: var(--activeNav);
   border-radius: 90px;
   height: 27px;
   width: 50px;
   align-content: center;
-  display:inline-block;
+  display: inline-block;
   /* position: absolute;
   z-index: -1; */
   /* color: var(--neutral-2); */
@@ -185,14 +189,17 @@ footer {
     padding: 5px;
     height: auto;
   }
+
   .nav-menu li a {
     display: none;
   }
+
   nav ul {
     margin-right: 10px;
     align-content: end;
     padding-left: 10px;
   }
+
   nav li {
     margin: 5 5px;
   }
@@ -218,6 +225,7 @@ footer {
     flex-direction: column;
     text-align: start;
   }
+
   .login-main {
     /* margin-left: 0px; */
     display: flex;
@@ -225,6 +233,7 @@ footer {
     align-items: center;
     margin-top: auto;
   }
+
   .boxin {
     /* margin-left: px; */
     margin: auto;
@@ -265,10 +274,11 @@ footer {
     justify-content: space-between;
     min-width: 20%;
   }
+
   .btm_nav li {
     font-size: large;
-    text-align:center;
-    width:100px;
+    text-align: center;
+    width: 100px;
     justify-content: center;
   }
 
@@ -276,26 +286,27 @@ footer {
     text-decoration: none;
     color: var(--neutral);
   }
+
   .btm_nav a span.material-symbols-rounded {
-    font-size: 24px;
+    font-size: 15px;
     display: block;
     margin: 0 auto;
   }
+
   .logo_btm {
     display: none;
     align-items: center;
   }
+
   /* UPPER NAV */
   .upper_nav ul {
     display: none;
-  }
-  .hero-div {
-
   }
 
 
   /* HIDE SCROLL */
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -319,15 +330,15 @@ footer {
   width: 300px;
   height: 500px;
   background: rgb(101, 101, 113);
-  background: linear-gradient(
-    180deg,
-    var(--gradient-login-1) 0%,
-    var(--gradient-login-2) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--gradient-login-1) 0%,
+      var(--gradient-login-2) 100%);
 }
+
 .boxin h1 {
   padding-top: 25px;
 }
+
 .txt_field {
   position: relative;
   font-family: Space Grotesk, sans-serif;
@@ -360,28 +371,28 @@ footer {
   color: var(--neutral);
 }
 
-.login-footer {
+/* KURSUS PAGE */
+
+.contier {
   color: var(--neutral);
-  text-align: center;
-  padding-bottom: 80px;
 }
 
-/* KURSUS PAGE */
 .kursus-main {
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
+
 .kursus-kotak {
   width: 210px;
   border-radius: 12px;
   display: inline-block;
   position: relative;
-  color: rgb(255, 255, 255);
+  color: var(--neutral);
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  
+
 }
 
 .kursus-kotak1 .kursus-box-materi .img img {
@@ -390,8 +401,9 @@ footer {
   position: relative;
   justify-content: start;
   align-items: center;
-  
+
 }
+
 .kursus-kotak1 .kursus-box-materi .kursus-materi {
   margin: 0 0px 0px 20px;
   /* background-color: #ac7008; */
@@ -404,6 +416,7 @@ footer {
   justify-content: start;
   align-items: center;
 }
+
 .kursus-kotak1,
 .kursus-kotak2,
 .kursus-kotak3 {
@@ -411,22 +424,22 @@ footer {
   margin-bottom: 60px;
   width: 100%;
   max-width: none;
-  background: linear-gradient(
-    180deg,
-    var(--gradient-login-1) 0%,
-    var(--gradient-login-2) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--gradient-login-1) 0%,
+      var(--gradient-login-2) 100%);
   /* padding: 9px; */
-  
+
 }
+
 .kursus-box-materi .materi .materi_text {
   padding: 20px;
   border-radius: 1px;
   justify-content: space-between;
   text-align: left;
-  
-  
+
+
 }
+
 .kursus-teks {
   position: absolute;
   top: 0;
@@ -437,35 +450,37 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    var(--gradient-login-1) 0%,
-    var(--gradient-login-2) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--gradient-login-1) 0%,
+      var(--gradient-login-2) 100%);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   box-sizing: border-box;
   font-family: Space Grotesk, sans-serif;
   margin-top: 10px;
 }
+
 .kursus-teks p {
   font-size: 20px;
 }
+
 .kursus-box-materi {
   display: flex;
   width: 100%;
   margin-top: 40px;
 }
+
 .kursus-awal-text {
   font-weight: bold;
   text-align: center;
   font-size: 36px;
   margin: 20px 0;
 }
+
 .kursus-isi_teks {
   height: 10px;
   font-size: 14px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   width: 100%;
   font-family: Space Grotesk, sans-serif;
@@ -481,7 +496,7 @@ footer {
 }
 
 .bg-animation {
-  position: fixed; 
+  position: fixed;
   z-index: -1;
   top: 0;
   left: 0;
@@ -1639,6 +1654,7 @@ footer {
   from {
     -webkit-transform: translateY(0px);
   }
+
   to {
     -webkit-transform: translateY(-2000px);
   }
@@ -1648,6 +1664,7 @@ footer {
   from {
     -moz-transform: translateY(0px);
   }
+
   to {
     -moz-transform: translateY(-2000px);
   }
@@ -1657,6 +1674,7 @@ footer {
   from {
     -ms-transform: translateY(0px);
   }
+
   to {
     -ms-transform: translateY(-2000px);
   }
@@ -1666,8 +1684,10 @@ footer {
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(-2000px);
   }
 }
+
 /* END OF STAR BACKGROUND EFFECT     */

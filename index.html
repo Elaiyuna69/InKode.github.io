@@ -76,19 +76,19 @@
       <li onclick="window.location.href='../index.html'">
         <a href="#" class="nav_active">
           <span class="material-symbols-rounded"><i class="fa-light fa-house"></i></span>
-          <span>Beranda</span>
+          <span class="nav_text">Beranda</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/course.html'">
         <a href="#">
           <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
-          <span>Kursus</span>
+          <span class="nav_text">Kursus</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/exercise.html'">
         <a href="#">
           <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
-          <span>Latihan</span>
+          <span class="nav_text">Latihan</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/login.html'" id="activated">
@@ -113,8 +113,8 @@
           <i class="fa-light fa-moon" slot="selected"></i>
         </md-icon-button>
         <div class="hero-div">
-          <h2 style="font-size: xx-large; margin-bottom: 0px">
-            Level UP Kodingmu
+          <h2 id="introduce">
+            Level UP <br>Kodingmu
           </h2>
           <div class="text_line">
             <p>
@@ -129,48 +129,100 @@
             Sigma Kan?
           </md-filled-button>
         </div>
+        <h2 style="text-align: center; justify-content:center;">Fitur Menarik</h2>
+        <div class="home_grid-container">
         <div class="home_feature-grid">
           <div class="home_feature-card">
-              <i data-lucide="gamepad"></i>
+            <i class="fa-light fa-gamepad"></i>
               <h3>Pembelajaran Berbasis Game</h3>
               <p>Belajar sambil bermain untuk pengalaman yang menyenangkan</p>
           </div>
           <div class="home_feature-card">
-              <i data-lucide="users"></i>
+            <i class="fa-light fa-users"></i>
               <h3>Komunitas Suportif</h3>
               <p>Diskusi dan bantuan dari sesama pembelajar</p>
           </div>
           <div class="home_feature-card">
-              <i data-lucide="hard-drive"></i>
-              <h3>Penyimpanan Akun</h3>
-              <p>Simpan progres belajar Anda dengan aman</p>
+            <i class="fa-light fa-books"></i>
+            <h3>Materi Komprehensif</h3>
+            <p>Dari dasar hingga tingkat lanjut</p>
+        </div>
+        </div>
+        </div>
+        <section class="home_carousel">
+            <div class="home_container">
+              <h2 style="text-align: center; justify-content:center;">Sekilas Materi Unik</h2>
+                <div class="home_carousel-container">
+                    <div class="home_carousel-slide">
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>CSS Flexbox</h3>
+                                <p>Flexbox membuat layout responsif menjadi mudah! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem et vero tenetur voluptate facilis possimus minima itaque, eum nihil modi eos numquam ad. Architecto possimus eum velit a. Consectetur, ex.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>HTML Semantik</h3>
+                                <p>Tag semantik meningkatkan aksesibilitas dan SEO. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet obcaecati, asperiores minima ullam praesentium distinctio, soluta unde, eligendi perferendis ea illum quod iste doloremque? Distinctio inventore cum voluptate tempore facilis!</p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>JavaScript Promises</h3>
+                                <p>Promises memudahkan penanganan operasi asinkron. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, officia amet quibusdam minus dolorem deleniti ipsum, quasi omnis doloremque tenetur possimus fugit doloribus repellat perspiciatis non minima eligendi sequi necessitatibus!</p>
+                            </div>
+                        </div>
+                        <div class="home_carousel-item">
+                            <div class="home_carousel-content">
+                                <h3>Python List Comprehension</h3>
+                                <p>Buat list dengan cara yang efisien dan elegan. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto minus consectetur, amet quas cumque ipsam voluptatum maiores recusandae nobis aliquid? Iure temporibus nemo quas saepe reprehenderit atque voluptates molestiae aut.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home_carousel-button-container">
+                  <div class="home_carousel-button-content">
+                    <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                      <i class="fa-light fa-arrow-left"></i>
+                    </button>
+                  </div>
+                  <div class="home_carousel-button-content">
+                    <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                      <i class="fa-light fa-arrow-right"></i>
+                    </button>
+                  </div>
+              </div>
+            </div>
+        </section>
+        <section class="home_section home_container">
+          <div class="home_h2">
+            <h2>Lanjutkan Belajar</h2>
           </div>
-          <div class="home_feature-card">
-              <i data-lucide="book"></i>
-              <h3>Materi Komprehensif</h3>
-              <p>Dari dasar hingga tingkat lanjut</p>
+          <div class="home_unfinished-grid">
+              <div class="home_unfinished-card">
+                  <h3>Dasar-dasar HTML</h3>
+                  <div class="home_progress-bar">
+                      <div class="home_progress-bar-fill" style="width: 75%"></div>
+                  </div>
+                  <p>Progress: 75%</p>
+              </div>
+              <div class="home_unfinished-card">
+                  <h3>CSS Layout</h3>
+                  <div class="home_progress-bar">
+                      <div class="home_progress-bar-fill" style="width: 50%"></div>
+                  </div>
+                  <p>Progress: 50%</p>
+              </div>
+              <div class="home_unfinished-card">
+                  <h3>JavaScript Dasar</h3>
+                  <div class="home_progress-bar">
+                      <div class="home_progress-bar-fill" style="width: 30%"></div>
+                  </div>
+                  <p>Progress: 30%</p>
+              </div>
           </div>
-      </div>
-        <p>
-          Ini adalah halaman utama website sederhana. Kamu bisa menambahkan
-          konten di sini.
-        </p>
-        <p>
-          ini merupakan tahap awal dari kode kode dalam Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Quis id in velit modi quo aperiam,
-          quam voluptatibus doloribus debitis accusantium necessitatibus fugiat
-          reprehenderit praesentium ad culpa aspernatur animi? Et, dolor. Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Culpa ducimus vero
-          adipisci ad neque voluptas quisquam, exercitationem autem aliquid
-          illum amet asperiores? Vitae amet quae fugit. Doloribus dolore debitis
-          ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-          ipsam perspiciatis dolore iste mollitia accusantium, quo quam quas
-          dignissimos, adipisci dolores. Exercitationem cupiditate ad debitis
-          reiciendis. Voluptatibus magni voluptatem deserunt. Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Ipsam a doloribus maxime
-          eligendi, necessitatibus aperiam quis. Eum enim culpa illo vel est
-          suscipit iure soluta at corporis error! Architecto, laboriosam!
-        </p>
+        </section>
       </div>
     </main>
     <div class="divider"></div>

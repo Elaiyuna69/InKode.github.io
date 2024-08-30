@@ -383,7 +383,7 @@ footer {
   }
 
   .boxin {
-    margin: auto;
+    display: fixed;
     justify-content: center;
     align-items: center;
   }
@@ -540,7 +540,7 @@ footer {
 
 /* LOGIN */
 .boxin {
-  /* margin-left: 60px; */
+  margin: auto;
   border-radius: 12px;
   text-align: center;
   padding-top: auto;

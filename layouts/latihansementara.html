@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Latihan Pemrograman</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #0f0f23;
+            color: #0b032b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .user-card {
+            background-color: rgba(0, 255, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .user-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .user-photo {
+            width: 100px;
+            height: 100px;
+            background-color: #003300;
+            border-radius: 50%;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: #00ff00;
+            transition: all 0.3s ease;
+        }
+
+        .user-photo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+
+        .user-info {
+            flex-grow: 1;
+        }
+
+        .user-info h2 {
+            margin: 0 0 10px 0;
+            color: #00ff00;
+        }
+
+        .user-info p {
+            margin: 5px 0;
+            color: #00cc00;
+        }
+
+        .upload-btn {
+            background-color: #006600;
+            color: #00ff00;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .upload-btn:hover {
+            background-color: #009900;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .skill-selection {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+            animation: slideIn 0.5s ease-out;
+            animation-delay: 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .skill-btn {
+            background-color: #003300;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 255, 0, 0.1);
+        }
+
+        .skill-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .skill-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+        }
+
+        .skill-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .question-container {
+            background-color: rgba(0, 255, 0, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 255, 0, 0.1);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .question-container h3 {
+            color: #00ff00;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+        }
+
+        .question-container pre {
+            background-color: #001100;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .question-container code {
+            color: #00cc00;
+        }
+
+        .answer-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .answer-option {
+            background-color: #004400;
+            color: #00ff00;
+            border: none;
+            padding: 10px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .answer-option:hover {
+            background-color: #006600;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .user-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .user-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .skill-selection {
+                grid-template-columns: 1fr;
+            }
+            .answer-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="user-card">
+            <div class="user-photo"><img src="" alt="PP"></div>
+            <div class="user-info">
+                <h2>ADMIN1234#</h2>
+                <p>Kemampuan: HTML</p>
+                <p>Level: 12</p>
+                <p>XP: 405 / 10000</p>
+            </div>
+            <button class="upload-btn">Unggah</button>
+        </div>
+
+        <div class="skill-selection">
+            <button class="skill-btn" onclick="selectSkill('cpp')">
+                <span class="skill-icon"><img src="" alt="gambar"></span>
+                <span>Algoritma &amp; Struktur Data</span>
+            </button>
+            <button class="skill-btn" onclick="selectSkill('html')">
+                <span class="skill-icon"><img src="" alt="gambar"></span>
+                <span>Pengembangan Web</span>
+            </button>
+            <button class="skill-btn" onclick="selectSkill('python')">
+                <span class="skill-icon"><img src="" alt="gambar"></span>
+                <span>Kemahiran Python</span>
+            </button>
+        </div>
+
+        <div id="question-container" class="question-container" style="display: none;">
+            <!-- Pertanyaan akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let currentSkill = '';
+        const questions = {
+            cpp: [
+                {
+                    type: 'multiple-choice',
+                    question: 'Apa output dari kode berikut?',
+                    code: `
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5;
+    cout << x++ << " " << ++x;
+    return 0;
+}`,
+                    options: [
+                        '5 7',
+                        '6 7',
+                        '5 6',
+                        '6 6'
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    type: 'fill-in-the-blank',
+                    question: 'Lengkapi kode berikut untuk menukar dua variabel tanpa menggunakan variabel tambahan:',
+                    code: `
+void swap(int &a, int &b) {
+    a = __1__;
+    b = __2__;
+    a = __3__;
+}`,
+                    blanks: ['a ^ b', 'a ^ b', 'a ^ b'],
+                    correctAnswer: ['a ^ b', 'b ^ a', 'a ^ b']
+                }
+            ],
+            html: [
+                {
+                    type: 'multiple-choice',
+                    question: 'Manakah dari berikut ini yang merupakan tag semantik HTML5?',
+                    options: [
+                        '<div>',
+                        '<span>',
+                        '<article>',
+                        '<b>'
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    type: 'fill-in-the-blank',
+                    question: 'Lengkapi kode CSS berikut untuk membuat layout flexbox:',
+                    code: `
+.container {
+    display: __1__;
+    justify-content: __2__;
+    align-items: __3__;
+}`,
+                    blanks: ['flex', 'center', 'center'],
+                    correctAnswer: ['flex', 'center', 'center']
+                }
+            ],
+            python: [
+                {
+                    type: 'multiple-choice',
+                    question: 'Apa output dari kode Python berikut?',
+                    code: `
+def mystery(x):
+    return x * 2
+
+y = mystery
+print(y(4))`,
+                    options: [
+                        '4',
+                        '8',
+                        '16',
+                        'Error'
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    type: 'fill-in-the-blank',
+                    question: 'Lengkapi kode berikut untuk membuat generator fibonacci:',
+                    code: `
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        __1__
+        a, b = __2__, __3__`,
+                    blanks: ['yield a', 'b', 'a + b'],
+                    correctAnswer: ['yield a', 'b', 'a + b']
+                }
+            ]
+        };
+
+        function selectSkill(skill) {
+            currentSkill = skill;
+            currentQuestionIndex = 0;
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const container = document.getElementById('question-container');
+            container.style.display = 'block';
+            const question = questions[currentSkill][currentQuestionIndex];
+            let questionHTML = '';
+
+            if (question.type === 'multiple-choice') {
+                questionHTML = `
+                    <h3>Pertanyaan ${currentQuestionIndex + 1}</h3>
+                    <p>${question.question}</p>
+                    ${question.code ? `<pre><code>${question.code}</code></pre>` : ''}
+                    <div class="answer-options">
+                        ${question.options.map((option, index) => `
+                            <button class="answer-option" onclick="checkAnswer(${index})">${option}</button>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (question.type === 'fill-in-the-blank') {
+                questionHTML = `
+                    <h3>Pertanyaan ${currentQuestionIndex + 1}</h3>
+                    <p>${question.question}</p>
+                    <pre><code>${question.code.replace(/__\d__/g, match => {
+                        const index = parseInt(match.match(/\d/)[0]) - 1;
+                        return `<input type="text" class="blank-input" data-index="${index}" style="width: 100px;">`;
+                    })}</code></pre>
+                    <button onclick="checkFilledBlanks()">Kirim Jawaban</button>
+                `;
+            }
+
+            container.innerHTML = questionHTML;
+            container.style.animation = 'none';
+            container.offsetHeight; // Trigger reflow
+            container.style.animation = null;
+        }
+
+        function checkAnswer(selectedIndex) {
+            const question = questions[currentSkill][currentQuestionIndex];
+            if (selectedIndex === question.correctAnswer) {
+                alert('Benar!');
+                nextQuestion();
+            } else {
+                alert('Salah. Coba lagi!');
+            }
+        }
+
+        function checkFilledBlanks() {
+            const question = questions[currentSkill][currentQuestionIndex];
+            const inputs = document.querySelectorAll('.blank-input');
+            const userAnswers = Array.from(inputs).map(input => input.value.trim());
+            
+            if (userAnswers.every((answer, index) => answer === question.correctAnswer[index])) {
+                alert('Benar!');
+                nextQuestion();
+            } else {
+                alert('Salah. Coba lagi!');
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions[currentSkill].length) {
+                showQuestion();
+            } else {
+                alert('Selamat! Kamu telah menyelesaikan semua pertanyaan untuk keterampilan ini.');
+                document.getElementById('question-container').style.display = 'none';
+            }
+        }
+
+        // Animate buttons on load
+        window.onload = function() {
+            const buttons = document.querySelectorAll('.skill-btn');
+            buttons.forEach((btn, index) => {
+                btn.style.animationDelay = `${0.1 * (index + 1)}s`;
+            });
+        }
+    </script>
+</body>
+</html>

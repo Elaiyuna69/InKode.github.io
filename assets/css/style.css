@@ -373,8 +373,6 @@ footer {
   }
 
   .login-main {
-    margin-right: 60px;
-    margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,13 +543,10 @@ footer {
 
 /* LOGIN */
 .boxin {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   margin: auto;
-  width: 300px;
-  height: 500px;
+  width: 250px;
+  height: 400px;
   text-align: center;
   border-radius: 12px;
   background: rgb(101, 101, 113);
@@ -573,7 +568,7 @@ footer {
   font-family: Space Grotesk, sans-serif;
   margin: 0px;
   padding-top: 20px;
-  transform: none;
+  width: 80%;
 }
 
 .login-button {
@@ -594,9 +589,7 @@ footer {
 }
 
 .login-main {
-  padding-top: 70px;
-  /* padding-left: 90px; */
-  padding-right: 30px;
+  padding-top: 80px;
   color: var(--neutral);
 }
 

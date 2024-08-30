@@ -540,12 +540,15 @@ footer {
 
 /* LOGIN */
 .boxin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: auto;
-  border-radius: 12px;
-  text-align: center;
-  padding-top: auto;
   width: 300px;
   height: 500px;
+  text-align: center;
+  border-radius: 12px;
   background: rgb(101, 101, 113);
   background: linear-gradient(180deg,
       var(--gradient-login-1) 0%,
@@ -554,6 +557,10 @@ footer {
 
 .boxin h1 {
   padding-top: 25px;
+}
+
+.loginfooter {
+  margin-top: 11vh;
 }
 
 .txt_field {
@@ -715,11 +722,14 @@ footer {
   color: var(--neutral);
   font-family: Space Grotesk, sans-serif;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 2.2;
 }
 
 .course-box {
   background-color: var(--neutral2);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   border-radius: 5px;
 }

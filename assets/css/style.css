@@ -321,6 +321,7 @@ footer {
   border-radius: 50%;
 }
 
+
 /* ADAPTIVE SCREEN */
 @media screen and (max-width: 770px) {
   nav {
@@ -490,6 +491,10 @@ footer {
 
   .home_section{
     width: 100%;
+  }
+
+  .course-text {
+    font-size: 12px;
   }
 
   .kursus-material {
@@ -732,6 +737,14 @@ footer {
   flex-direction: column;
   padding: 10px;
   border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width:100%;
+  overflow-x: auto;
+}
+
+.course-text {
+  width: 100%;
 }
 
 /* STAR BACKGROUND EFFECT*/

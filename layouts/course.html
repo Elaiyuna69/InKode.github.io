@@ -50,14 +50,17 @@
         &nbsp;
         <a href="#">Latihan</a>
       </li>
-      <li onclick="window.location.href='../layouts/login.html'">
-        <span class="material-symbols-rounded"><i class="fa-light fa-right-to-bracket"></i></span>
+      <li onclick="window.location.href='../layouts/social.html'">
+        <span class="material-symbols-rounded"><i class="fa-light fa-users"></i></span>
         &nbsp;
-        <a href="#">Login</a>
+        <a href="#">Sosial</a>
       </li>
       <li><md-icon-button style="margin-top: 0px;" id="mode-toggle-dekstop" toggle selected>
           <i class="fa-light fa-sun-bright"></i>
           <i class="fa-light fa-moon" slot="selected"></i>
+        </md-icon-button></li>
+        <li onclick="window.location.href='../layouts/login.html'"><md-icon-button style="margin-top: 0px; padding: -100px;" id="mode-toggle-dekstop" >
+          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
         </md-icon-button></li>
       </ul>
     </nav>
@@ -81,19 +84,33 @@
             <span>Latihan</span>
           </a>
         </li>
-        <li onclick="window.location.href='../layouts/login.html'" id="activated">
+        <li onclick="window.location.href='../layouts/social.html'" id="activated">
           <a href="#">
-            <span class="material-symbols-rounded"><i class="fa-light fa-user"></i></span>
-            <span class="nav_text">Akun</span>
+            <span class="material-symbols-rounded"><i class="fa-light fa-users"></i></span>
+            <span class="nav_text">Sosial</span>
           </a>
+          </li>
     </nav>
     
     <main>
       <div class="content-title">
-    <md-icon-button style="margin-top: 18px;" id="mode-toggle" class="switchmode" toggle selected>
-      <i class="fa-light fa-sun-bright"></i>
-      <i class="fa-light fa-moon" slot="selected"></i>
-    </md-icon-button>
+        <md-icon-button
+        style="margin-top: 18px"
+        id="mode-toggle"
+        class="switchmode"
+        toggle
+        selected
+      >
+        <i class="fa-light fa-sun-bright"></i>
+        <i class="fa-light fa-moon" slot="selected"></i>
+      </md-icon-button>
+      <md-icon-button 
+      class="avatarmode" 
+      style="margin-top: 14px; padding: -100px;" 
+      id="mode-toggle-dekstop"
+      onclick="window.location.href='../layouts/login.html'" >
+        <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
+      </md-icon-button>
     <div class="contier">
       <p class="kursus-awal-text">Pilihan Materi</p>
       <div class="kursus-kotak kursus-kotak1">

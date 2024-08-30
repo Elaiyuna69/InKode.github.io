@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   let isDarkMode = localStorage.getItem('mode') || 'light';
 
@@ -69,3 +70,4 @@ $(document).ready(function () {
     applyMode();
   })
 });
+

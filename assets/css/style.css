@@ -202,6 +202,10 @@ footer {
 
 }
 
+.home-hero-img{
+  height: 500px;
+}
+
 /* HOME CHEVRON */
 @keyframes bounce {
   0%, 100% {
@@ -232,7 +236,7 @@ footer {
     var(--gradient-login-1) 0%,
     var(--gradient-login-2) 100%
   );
-  color: white;
+  color: var(--neutral);
   border-radius: 10px;
   padding: 20px;
 }
@@ -241,6 +245,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+}
+
+.home-active-thumbnail{
+  background-color: red;
+  height:30px;
+  width: 30px;
 }
 .home-active-stats-title {
   font-size: 18px;
@@ -269,8 +279,10 @@ footer {
   margin-right: -10px;
 }
 .home-active-description {
+  padding-left: 20px;
   font-size: 14px;
-  color: #aaa;
+  color: var(--neutral);
+  opacity:50%;
 }
 
 
@@ -605,6 +617,10 @@ footer {
 
   .home_section{
     width: 100%;
+  }
+
+  .home-hero-img{
+    height: 300px;
   }
 
   .course-text {

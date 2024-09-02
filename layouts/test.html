@@ -3,325 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Coding Interaktif</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <title>theClose Footer</title>
     <style>
-        /* Reset dan styles dasar */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f3f4f6;
-        }
-        .home_container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
+            background-color: #ffffff;
         }
-        .home_header {
-            background-color: #2563eb;
-            color: white;
-            padding: 1rem;
-        }
-        .home_header h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .home_section {
-            margin: 2rem 0;
-        }
-        .home_section h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .home_feature-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .home_feature-card h3 {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .home_feature-card p {
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-        .home_carousel {
-            position: relative;
-            background-color: #e5e7eb;
-            padding: 2rem 0;
-        }
-        .home_carousel-container {
-            overflow: hidden;
-        }
-        .home_carousel-slide {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
-        .home_carousel-item {
-            flex: 0 0 100%;
-            padding: 1rem;
-        }
-        .home_carousel-content {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .home_carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 0.5rem;
-            cursor: pointer;
-        }
-        .home_carousel-button-left {
-            left: 1rem;
-        }
-        .home_carousel-button-right {
-            right: 1rem;
-        }
-        .home_unfinished-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        .home_unfinished-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .home_progress-bar {
-            width: 100%;
-            background-color: #e5e7eb;
-            border-radius: 9999px;
-            height: 0.5rem;
-            overflow: hidden;
-        }
-        .home_progress-bar-fill {
-            height: 100%;
-            background-color: #2563eb;
-            border-radius: 9999px;
-        }
-        .home_community-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        .home_community-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .home_quest-reward {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .home_quest-item, .home_reward-item {
+        .footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 0.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
-        .home_xp {
-            color: #10b981;
-            font-weight: 600;
+        .logo-section {
+            flex: 1;
+            margin-bottom: 20px;
         }
-        .home_points {
-            color: #8b5cf6;
-            font-weight: 600;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #000;
+        }
+        .links-section {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        .link-column {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        @media (max-width: 770px) {
+            .link-column {
+                flex: 1 1 100%; /* One column per row on small screens */
+            }
         }
     </style>
 </head>
 <body>
-    <header class="home_header">
-        <h1>Belajar Coding Interaktif</h1>
-    </header>
-
-    <main>
-        <section class="home_section home_container">
-            <h2>Fitur Menarik</h2>
-            <div class="home_feature-grid">
-                <div class="home_feature-card">
-                    <i data-lucide="gamepad"></i>
-                    <h3>Pembelajaran Berbasis Game</h3>
-                    <p>Belajar sambil bermain untuk pengalaman yang menyenangkan</p>
-                </div>
-                <div class="home_feature-card">
-                    <i data-lucide="users"></i>
-                    <h3>Komunitas Suportif</h3>
-                    <p>Diskusi dan bantuan dari sesama pembelajar</p>
-                </div>
-                <div class="home_feature-card">
-                    <i data-lucide="hard-drive"></i>
-                    <h3>Penyimpanan Akun</h3>
-                    <p>Simpan progres belajar Anda dengan aman</p>
-                </div>
-                <div class="home_feature-card">
-                    <i data-lucide="book"></i>
-                    <h3>Materi Komprehensif</h3>
-                    <p>Dari dasar hingga tingkat lanjut</p>
-                </div>
+    <footer class="footer">
+        <div class="logo-section">
+            <div class="logo">theClose</div>
+            <div class="social-icons">
+                <img src="/api/placeholder/24/24" alt="Twitter" class="social-icon">
+                <img src="/api/placeholder/24/24" alt="TikTok" class="social-icon">
+                <img src="/api/placeholder/24/24" alt="Instagram" class="social-icon">
             </div>
-        </section>
-
-        <section class="home_carousel">
-            <div class="home_container">
-                <h2>Sekilas Materi Unik</h2>
-                <div class="home_carousel-container">
-                    <div class="home_carousel-slide">
-                        <div class="home_carousel-item">
-                            <div class="home_carousel-content">
-                                <h3>CSS Flexbox</h3>
-                                <p>Flexbox membuat layout responsif menjadi mudah!</p>
-                            </div>
-                        </div>
-                        <div class="home_carousel-item">
-                            <div class="home_carousel-content">
-                                <h3>HTML Semantik</h3>
-                                <p>Tag semantik meningkatkan aksesibilitas dan SEO.</p>
-                            </div>
-                        </div>
-                        <div class="home_carousel-item">
-                            <div class="home_carousel-content">
-                                <h3>JavaScript Promises</h3>
-                                <p>Promises memudahkan penanganan operasi asinkron.</p>
-                            </div>
-                        </div>
-                        <div class="home_carousel-item">
-                            <div class="home_carousel-content">
-                                <h3>Python List Comprehension</h3>
-                                <p>Buat list dengan cara yang efisien dan elegan.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
-                    <i data-lucide="chevron-left"></i>
-                </button>
-                <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
-                    <i data-lucide="chevron-right"></i>
-                </button>
+        </div>
+        <div class="links-section">
+            <div class="link-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
             </div>
-        </section>
-
-        <section class="home_section home_container">
-            <h2>Lanjutkan Belajar</h2>
-            <div class="home_unfinished-grid">
-                <div class="home_unfinished-card">
-                    <h3>Dasar-dasar HTML</h3>
-                    <div class="home_progress-bar">
-                        <div class="home_progress-bar-fill" style="width: 75%"></div>
-                    </div>
-                    <p>Progress: 75%</p>
-                </div>
-                <div class="home_unfinished-card">
-                    <h3>CSS Layout</h3>
-                    <div class="home_progress-bar">
-                        <div class="home_progress-bar-fill" style="width: 50%"></div>
-                    </div>
-                    <p>Progress: 50%</p>
-                </div>
-                <div class="home_unfinished-card">
-                    <h3>JavaScript Dasar</h3>
-                    <div class="home_progress-bar">
-                        <div class="home_progress-bar-fill" style="width: 30%"></div>
-                    </div>
-                    <p>Progress: 30%</p>
-                </div>
+            <div class="link-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Support Team</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Security FAQs</a></li>
+                </ul>
             </div>
-        </section>
-
-        <section class="home_section home_carousel">
-            <div class="home_container">
-                <h2>Update Komunitas</h2>
-                <div class="home_community-grid">
-                    <div class="home_community-card">
-                        <i data-lucide="bell"></i>
-                        <h3>Pertanyaan Baru</h3>
-                        <p>5 pertanyaan baru tentang React Hooks</p>
-                    </div>
-                    <div class="home_community-card">
-                        <i data-lucide="award"></i>
-                        <h3>Kuis Latihan Baru</h3>
-                        <p>Kuis JavaScript ES6 telah ditambahkan</p>
-                    </div>
-                    <div class="home_community-card">
-                        <i data-lucide="users"></i>
-                        <h3>Diskusi Populer</h3>
-                        <p>Tips optimasi performa website</p>
-                    </div>
-                </div>
+            <div class="link-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
             </div>
-        </section>
-
-        <section class="home_section home_container">
-            <div class="home_quest-reward">
-                <div>
-                    <h2>Quest Harian</h2>
-                    <div class="home_quest-item">
-                        <span>Selesaikan 3 latihan CSS</span>
-                        <span class="home_xp">50 XP</span>
-                    </div>
-                    <div class="home_quest-item">
-                        <span>Bantu 2 anggota komunitas</span>
-                        <span class="home_xp">30 XP</span>
-                    </div>
-                    <div class="home_quest-item">
-                        <span>Buat proyek kecil menggunakan JavaScript</span>
-                        <span class="home_xp">100 XP</span>
-                    </div>
-                </div>
-                <div>
-                    <h2>Reward Toko</h2>
-                    <div class="home_reward-item">
-                        <span>Stiker Laptop Developer</span>
-                        <span class="home_points">500 poin</span>
-                    </div>
-                    <div class="home_reward-item">
-                        <span>Kursus Premium 1 Bulan</span>
-                        <span class="home_points">2000 poin</span>
-                    </div>
-                    <div class="home_reward-item">
-                        <span>Konsultasi 1-on-1 dengan Expert</span>
-                        <span class="home_points">5000 poin</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Carousel functionality
-        let currentSlide = 0;
-        const totalSlides = 4;
-
-        function moveCarousel(direction) {
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            document.querySelector('.home_carousel-slide').style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-    </script>
+        </div>
+    </footer>
 </body>
 </html>

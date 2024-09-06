@@ -59,8 +59,10 @@
           <i class="fa-light fa-sun-bright"></i>
           <i class="fa-light fa-moon" slot="selected"></i>
         </md-icon-button></li>
-        <li onclick="window.location.href='../layouts/login.html'"><md-icon-button style="margin-top: 0px; padding: -100px;" id="mode-toggle-dekstop" >
-          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
+      <li onclick="window.location.href='../layouts/login.html'"><md-icon-button
+          style="margin-top: 0px; padding: -100px;" id="mode-toggle-dekstop">
+          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar"
+            class="avatar">
         </md-icon-button></li>
     </ul>
   </nav>
@@ -89,63 +91,118 @@
           <span class="material-symbols-rounded"><i class="fa-light fa-users"></i></span>
           <span class="nav_text">Sosial</span>
         </a>
-        </li>
+      </li>
   </nav>
+  <main>
+    <div class="content-title">
+      <md-icon-button style="margin-top: 18px" id="mode-toggle" class="switchmode" toggle selected>
+        <i class="fa-light fa-sun-bright"></i>
+        <i class="fa-light fa-moon" slot="selected"></i>
+      </md-icon-button>
+      <md-icon-button class="avatarmode" style="margin-top: 14px; padding: -100px;" id="mode-toggle-dekstop"
+        onclick="window.location.href='../layouts/login.html'">
+        <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar"
+          class="avatar">
+      </md-icon-button>
+        <section>
+          <div class="exercise-container">
+            <section class="exercise-profile-section">
+              <div class="exercise-profile-image"
+                src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain">
 
-    <main>
-      <div class="content-title">
-        <md-icon-button
-          style="margin-top: 18px"
-          id="mode-toggle"
-          class="switchmode"
-          toggle
-          selected
-        >
-          <i class="fa-light fa-sun-bright"></i>
-          <i class="fa-light fa-moon" slot="selected"></i>
-        </md-icon-button>
-        <md-icon-button 
-        class="avatarmode" 
-        style="margin-top: 14px; padding: -100px;" 
-        id="mode-toggle-dekstop"
-        onclick="window.location.href='../layouts/login.html'" >
-          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
-        </md-icon-button>
-      <div class="hero-div">
-        <h2>Selamat Datang di InKode!</h2>
-        <p>Mulai perjalanan belajar coding Anda sekarang.</p>
-        <md-filled-button>Sigma Kan?</md-filled-button>
+              </div>
+              <div class="exercise-profile-info">
+                <h1>Mr. Sigma</h1>
+                <h5>Lv.3</h5>
+                <div class="exercise-progress-bar">
+                  <div class="exercise-progress"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="exercise-languages-grid">
+              <div class="exercise-language-card">
+                <div class="exercise-language-icon"><img id="cppwhite" src="../assets/images/cpp_logo.png" alt="" />
+                  <img id="cppblack" src="../assets/images/cpp_logoBlack.png" alt="" />
+                </div>
+                <div class="exercise-language-info">
+                  <h2 class="exercise-language-title">C++</h2>
+                  <p class="exercise-language-level">Level 3</p>
+                </div>
+                <i class="fas fa-chevron-right exercise-chevron-right"></i>
+              </div>
+              <div class="exercise-language-card">
+                <div class="exercise-language-icon"> <img id="htmlwhite" src="../assets/images/html.png" alt="" />
+                  <img id="htmlblack" src="../assets/images/htmlBlack.png" alt="" />
+                </div>
+                <div class="exercise-language-info">
+                  <h2 class="exercise-language-title">HTML</h2>
+                  <p class="exercise-language-level">Level 5</p>
+                </div>
+                <i class="fas fa-chevron-right exercise-chevron-right"></i>
+              </div>
+              <div class="exercise-language-card">
+                <div class="exercise-language-icon"></div>
+                <div class="exercise-language-info">
+                  <h2 class="exercise-language-title">JavaScript</h2>
+                  <p class="exercise-language-level">Level 4</p>
+                </div>
+                <i class="fas fa-chevron-right exercise-chevron-right"></i>
+              </div>
+              <div class="exercise-language-card">
+                <div class="exercise-language-icon"><img id="pywhite" src="../assets/images/py_logo.png" alt="" />
+                  <img id="pyblack" src="../assets/images/py_logoBlack.png" alt="" />
+                </div>
+                <div class="exercise-language-info">
+                  <h2 class="exercise-language-title">Python</h2>
+                  <p class="exercise-language-level">Level 2</p>
+                </div>
+                <i class="fas fa-chevron-right exercise-chevron-right"></i>
+              </div>
+
+            </section>
+
+          </div>
+        </section>
+  </main>
+  <div class="divider"></div>
+  <section>
+    <footer class="footer-footer">
+      <div class="footer-logo-section">
+        <div class="footer-logo">
+          @ 2024 InKode. All right reserved
+        </div>
       </div>
-      <h1>Selamat Datang di Website Saya!</h1>
-      <p>
-        Ini adalah halaman utama website sederhana. Kamu bisa menambahkan konten
-        di sini.
-      </p>
-      <p>
-        ini merupakan tahap awal dari kode kode dalam Lorem ipsum, dolor sit
-        amet consectetur adipisicing elit. Quis id in velit modi quo aperiam,
-        quam voluptatibus doloribus debitis accusantium necessitatibus fugiat
-        reprehenderit praesentium ad culpa aspernatur animi? Et, dolor. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Culpa ducimus vero
-        adipisci ad neque voluptas quisquam, exercitationem autem aliquid illum
-        amet asperiores? Vitae amet quae fugit. Doloribus dolore debitis ipsam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ipsam
-        perspiciatis dolore iste mollitia accusantium, quo quam quas
-        dignissimos, adipisci dolores. Exercitationem cupiditate ad debitis
-        reiciendis. Voluptatibus magni voluptatem deserunt. Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Ipsam a doloribus maxime
-        eligendi, necessitatibus aperiam quis. Eum enim culpa illo vel est
-        suscipit iure soluta at corporis error! Architecto, laboriosam!
-      </p>
+      <div class="footer-links-section">
+        <div class="footer-link-column">
+          <h3>Tentang</h3>
+          <ul>
+            <li><a href="#">Tujuan</a></li>
+            <li><a href="#">Branding</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-column">
+          <h3>Bantuan</h3>
+          <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Istilah</a></li>
+            <li><a href="#">Komunitas</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-column">
+          <h3>Legalitas</h3>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
       </div>
-    </main>
-    <div class="divider"></div>
-    <footer>
-      <p>&copy; 2024 InKode. All rights reserved.</p>
     </footer>
-    
-  </body>
-  
+  </section>
+
+</body>
+
 <body style="background-color: black">
   <div class="bg-animation">
     <div id="stars"></div>

@@ -42,6 +42,8 @@ $(document).ready(function () {
       $('#htmlblack').hide();
       $('#pywhite').show();
       $('#pyblack').hide();
+      $('#jSwhite').show();
+      $('#jSblack').hide();
     } else {
       $('#whitemode').show();
       $('#darkmode').hide();
@@ -51,6 +53,8 @@ $(document).ready(function () {
       $('#htmlblack').show();
       $('#pywhite').hide();
       $('#pyblack').show();
+      $('#jSwhite').hide();
+      $('#jSblack').show();
     }
   }
 

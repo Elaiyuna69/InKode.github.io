@@ -13,6 +13,7 @@
   --md-ripple-hover-color: var(--md-sys-color-primary);
   --md-ripple-pressed-color: var(--md-sys-color-primary);
   --md-filled-button-label-text-font: Space Grotesk;
+  --md-outlined-button-label-text-font: Space Grotesk;
   --md-outlined-text-field-input-text-font: Space Grotesk;
   --md-outlined-text-field-label-text-font: Space Grotesk;
   --md-outlined-text-field-label-text-color: var(--neutral);
@@ -458,6 +459,7 @@ footer {
   cursor: pointer;
   border-radius: 20px;
   transition: 0.3s ease;
+  font-family: Space Grotesk, sans-serif;
 }
 .home-offers-button.active {
   background-color: #000000;

@@ -108,7 +108,7 @@ nav a {
 }
 
 .content-title {
-  padding-top: 30vh;
+  padding-top: 90px;
   padding-left: 90px;
   padding-right: 90px;
   padding-bottom: 20px;
@@ -226,8 +226,12 @@ footer {
 }
 
 .home-hero-img{
-  height: 500px;
+  margin-top: 30px;
+  height: 200px;
+  width: 500px;
   transition: 0.3s ease;
+  /* background-color:red; */
+  object-fit:cover;
 }
 
 /* HOME CHEVRON */
@@ -340,6 +344,14 @@ footer {
 .home-active-avatar {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  background-color: #555;
+  margin-right: -10px;
+  object-fit:cover;
+}
+.home-active-avatar-soc {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #555;
   margin-right: -10px;
@@ -542,7 +554,7 @@ footer {
 }
 
 #introduce{
-  font-size: 90px; margin-bottom: 0px; margin-top:0px;
+  font-size: 50px; margin-bottom: 0px; margin-top:0px;
   transition: 0.3s ease;
 }
 
@@ -1036,7 +1048,10 @@ footer {
   }
 
   .home-hero-img{
-    height: 300px;
+    height: 150px;
+    width: 300px;
+    transition: 0.3s ease;
+    object-fit:cover;
   }
 
   .home-about-header {

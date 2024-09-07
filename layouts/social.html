@@ -16,15 +16,15 @@
 
     document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
   </script>
-  <script src="../assets/js/modeswitch.js">
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InKode :</title>
+  <title>InKode: Home</title>
   <link type="text/css" rel="stylesheet" href="../assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" />
 </head>
 
@@ -36,146 +36,900 @@
     </li>
     <ul class="nav-menu">
       <li onclick="window.location.href='../index.html'">
-        <span class="material-symbols-rounded"><i style="margin-bottom: 4px;" class="fa-light fa-house"></i></span>
+        <span class="material-symbols-rounded">
+          <i style="margin-bottom: 4px" class="fa-light fa-house"></i>
+        </span>
         &nbsp;
         <a href="#">Beranda</a>
       </li>
       <li onclick="window.location.href='../layouts/course.html'">
-        <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
+        <span class="material-symbols-rounded">
+          <i class="fa-light fa-book"></i>
+        </span>
         &nbsp;
         <a href="#">Kursus</a>
       </li>
       <li onclick="window.location.href='../layouts/exercise.html'">
-        <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
+        <span class="material-symbols-rounded">
+          <i class="fa-light fa-pen-to-square"></i>
+        </span>
         &nbsp;
         <a href="#">Latihan</a>
       </li>
       <li class="nav_active_2" onclick="window.location.href='../layouts/social.html'">
-        <span class="material-symbols-rounded"><i class="fa-light fa-users"></i></span>
+        <span class="material-symbols-rounded">
+          <i class="fa-light fa-users"></i>
+        </span>
         &nbsp;
         <a href="#">Sosial</a>
       </li>
-      <li><md-icon-button style="margin-top: 0px;" id="mode-toggle-dekstop" toggle selected>
+      <li>
+        <md-icon-button style="margin-top: 0px" id="mode-toggle-dekstop" toggle selected>
           <i class="fa-light fa-sun-bright"></i>
           <i class="fa-light fa-moon" slot="selected"></i>
-        </md-icon-button></li>
-        <li onclick="window.location.href='../layouts/login.html'"><md-icon-button style="margin-top: 0px; padding: -100px;" id="mode-toggle-dekstop" >
-          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
-        </md-icon-button></li>
+        </md-icon-button>
+      </li>
+      <li onclick="window.location.href='../layouts/login.html'">
+        <md-icon-button style="margin-top: 0px; padding: -100px" id="mode-toggle-dekstop">
+          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar"
+            class="avatar" />
+        </md-icon-button>
+      </li>
     </ul>
   </nav>
   <nav class="btm_nav">
     <ul>
       <li onclick="window.location.href='../index.html'">
         <a href="#">
-          <span class="material-symbols-rounded"><i class="fa-light fa-house"></i></span>
-          <span>Beranda</span>
+          <span class="material-symbols-rounded">
+            <i class="fa-light fa-house"></i>
+          </span>
+          <span class="nav_text">Beranda</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/course.html'">
         <a href="#">
-          <span class="material-symbols-rounded"><i class="fa-light fa-book"></i></span>
-          <span>Kursus</span>
+          <span class="material-symbols-rounded">
+            <i class="fa-light fa-book"></i>
+          </span>
+          <span class="nav_text">Kursus</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/exercise.html'">
-        <a href="#" >
-          <span class="material-symbols-rounded"><i class="fa-light fa-pen-to-square"></i></span>
-          <span>Latihan</span>
+        <a href="#">
+          <span class="material-symbols-rounded">
+            <i class="fa-light fa-pen-to-square"></i>
+          </span>
+          <span class="nav_text">Latihan</span>
         </a>
       </li>
       <li onclick="window.location.href='../layouts/social.html'" id="activated">
         <a href="#" class="nav_active">
-          <span class="material-symbols-rounded"><i class="fa-light fa-users"></i></span>
+          <span class="material-symbols-rounded">
+            <i class="fa-light fa-users"></i>
+          </span>
           <span class="nav_text">Sosial</span>
         </a>
-        </li>
+      </li>
+    </ul>
   </nav>
 
-    <main>
-      <div class="content-title">
-        <md-icon-button
-          style="margin-top: 18px"
-          id="mode-toggle"
-          class="switchmode"
-          toggle
-          selected
-        >
-          <i class="fa-light fa-sun-bright"></i>
-          <i class="fa-light fa-moon" slot="selected"></i>
-        </md-icon-button>
-        <md-icon-button 
-        class="avatarmode" 
-        style="margin-top: 14px; padding: -100px;" 
-        id="mode-toggle-dekstop"
-        onclick="window.location.href='../layouts/login.html'" >
-          <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar" class="avatar">
-        </md-icon-button>
-      <div class="hero-div">
-        <h2>Selamat Datang di InKode!</h2>
-        <p>Mulai perjalanan belajar coding Anda sekarang.</p>
-        <md-filled-button>Sigma Kan?</md-filled-button>
-      </div>
-      <h1>Selamat Datang di Website Saya!</h1>
-      <p>
-        Ini adalah halaman utama website sederhana. Kamu bisa menambahkan konten
-        di sini.
-      </p>
-      <p>
-        ini merupakan tahap awal dari kode kode dalam Lorem ipsum, dolor sit
-        amet consectetur adipisicing elit. Quis id in velit modi quo aperiam,
-        quam voluptatibus doloribus debitis accusantium necessitatibus fugiat
-        reprehenderit praesentium ad culpa aspernatur animi? Et, dolor. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Culpa ducimus vero
-        adipisci ad neque voluptas quisquam, exercitationem autem aliquid illum
-        amet asperiores? Vitae amet quae fugit. Doloribus dolore debitis ipsam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ipsam
-        perspiciatis dolore iste mollitia accusantium, quo quam quas
-        dignissimos, adipisci dolores. Exercitationem cupiditate ad debitis
-        reiciendis. Voluptatibus magni voluptatem deserunt. Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Ipsam a doloribus maxime
-        eligendi, necessitatibus aperiam quis. Eum enim culpa illo vel est
-        suscipit iure soluta at corporis error! Architecto, laboriosam!
-      </p>
-      </div>
-    </main>
-    <div class="divider"></div>
-    <section>
-      <footer class="footer-footer">
-        <div class="footer-logo-section">
-          <div class="footer-logo">
+  <main>
+    <div class="content-title">
+      <md-icon-button style="margin-top: 18px" id="mode-toggle" class="switchmode" toggle selected>
+        <i class="fa-light fa-sun-bright"></i>
+        <i class="fa-light fa-moon" slot="selected"></i>
+      </md-icon-button>
+      <md-icon-button class="avatarmode" style="margin-top: 14px; padding: -100px" id="mode-toggle-dekstop"
+        onclick="window.location.href='../layouts/login.html'">
+        <img src="https://th.bing.com/th/id/OIP.3LeSnqLr6db8G2hQd6jXcAAAAA?rs=1&pid=ImgDetMain" alt="Avatar"
+          class="avatar" />
+      </md-icon-button>
+      <section class="home_carousel">
+        <div class="home_container">
+          <h2 style="text-align: center; justify-content: center">
+            Diskusi Terbaru
+          </h2>
+          <div class="home_carousel-container">
+            <div class="home_carousel-slide">
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home_carousel-button-container">
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                <i class="fa-light fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                <i class="fa-light fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_carousel">
+        <div class="home_container">
+          <h2 style="text-align: center; justify-content: center">
+            Diskusi Populer
+          </h2>
+          <div class="home_carousel-container">
+            <div class="home_carousel-slide">
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home_carousel-button-container">
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                <i class="fa-light fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                <i class="fa-light fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_carousel">
+        <div class="home_container">
+          <h2 style="text-align: center; justify-content: center">
+            Soal Populer
+          </h2>
+          <div class="home_carousel-container">
+            <div class="home_carousel-slide">
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home_carousel-button-container">
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                <i class="fa-light fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                <i class="fa-light fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_carousel">
+        <div class="home_container">
+          <h2 style="text-align: center; justify-content: center">
+            Leaderboard
+          </h2>
+          <h5  style="text-align: center; justify-content: center"> 
+            Minggu ini
+          </h5>
+          <div class="home_carousel-container">
+            <div class="home_carousel-slide">
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home_carousel-item">
+                <div class="home_carousel-content">
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/29/56e260fd-93bd-4055-baeb-ed502f6e1272.jpg"
+                        alt="Avatar"
+                        class="home-active-avatar-soc"
+                      />
+                    </div>
+                    <div style="padding-left: 20px;">
+                      <h2>Error "TypeError: 'NoneType' object is not subscriptable"</h2>
+                      <p>7 Sep 2024 - 3 jam lalu</p>
+                    </div>
+                  </div>
+                  <p>
+                    Saya sedang membuat program Python untuk mengolah data JSON, tetapi terus mendapatkan error seperti di atas. Saya sudah mencoba mengonve...
+                  </p>
+                  <div class="home-active-additional-info">
+                    <div class="home-active-avatars">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-UrYIzs2u3MPXTvIPUHNbHhH-jdy_Z04Ig&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://media.tenor.com/zZBeekcxu_EAAAAM/cat-silly.gif"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXUh8HVodsp1WkS6Gx2VL24YnMiNoVcocSA&s"
+                        alt="Avatar"
+                        class="home-active-avatar"
+                      />
+                    </div>
+                    <div class="home-active-description">
+                      <p>Astroids Destroyer, Mewing Gods + 20 orang lainnya berdikusi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home_carousel-button-container">
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-left" onclick="moveCarousel(-1)">
+                <i class="fa-light fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="home_carousel-button-content">
+              <button class="home_carousel-button home_carousel-button-right" onclick="moveCarousel(1)">
+                <i class="fa-light fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  </main>
+  <div class="divider"></div>
+  <section>
+    <footer class="footer-footer">
+      <div class="footer-logo-section">
+        <div class="footer-logo">
           @ 2024 InKode. All right reserved
-          </div>
         </div>
-        <div class="footer-links-section">
-          <div class="footer-link-column">
-            <h3>Tentang</h3>
-            <ul>
-              <li><a href="#">Tujuan</a></li>
-              <li><a href="#">Branding</a></li>
-            </ul>
-          </div>
-          <div class="footer-link-column">
-            <h3>Bantuan</h3>
-            <ul>
-              <li><a href="#">Pusat Bantuan</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Istilah</a></li>
-              <li><a href="#">Komunitas</a></li>
-            </ul>
-          </div>
-          <div class="footer-link-column">
-            <h3>Legalitas</h3>
-            <ul>
-              <li><a href="#">Syarat & Ketentuan</a></li>
-              <li><a href="#">Kebijakan Privasi</a></li>
-            </ul>
-          </div>
+      </div>
+      <div class="footer-links-section">
+        <div class="footer-link-column">
+          <h3>Tentang</h3>
+          <ul>
+            <li><a href="#">Tujuan</a></li>
+            <li><a href="#">Branding</a></li>
+          </ul>
         </div>
-      </footer>
-    </section>
-    
-  </body>
+        <div class="footer-link-column">
+          <h3>Bantuan</h3>
+          <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Istilah</a></li>
+            <li><a href="#">Komunitas</a></li>
+          </ul>
+        </div>
+        <div class="footer-link-column">
+          <h3>Legalitas</h3>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
+</body>
 
 <body style="background-color: black">
   <div class="bg-animation">
@@ -186,6 +940,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../assets/js/modeswitch.js"></script>
+  <script src="../assets/js/home_carousel.js"></script>
 </body>
 
 </html>

@@ -355,6 +355,7 @@ footer {
   border-radius: 50%;
   background-color: #555;
   margin-right: -10px;
+  object-fit:cover;
 }
 .home-active-description {
   padding-left: 20px;
@@ -509,6 +510,16 @@ footer {
   overflow-y: hidden;
 }
 .home_carousel-slide {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding: 0px;
+}
+.home_carousel-slide1 {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding: 0px;
+}
+.home_carousel-slide2 {
   display: flex;
   transition: transform 0.3s ease-in-out;
   padding: 0px;
@@ -820,7 +831,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-
+  
 }
 
 .exercise-language-card {
